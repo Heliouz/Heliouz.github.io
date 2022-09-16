@@ -3,8 +3,8 @@
 title: Your Name
 description: subtitle | affiliations | motto
 
-baseurl: heliouz.github.io #name of GitHub repository
-url: "" #custom url to be used instead of GitHub repository
+baseurl: "" #name of GitHub repository
+url: "https://heliouz.github.io" #custom url to be used instead of GitHub repository
 email: #
 
 # Pagination
