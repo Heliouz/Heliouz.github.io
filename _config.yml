@@ -1,7 +1,7 @@
 ### your site title here
 
-title: Your Name
-description: subtitle | affiliations | motto
+title: Helios Ocaña
+description: Investigo y divulgo sobre metales.
 
 baseurl: "" #name of GitHub repository
 url: "https://heliouz.github.io" #custom url to be used instead of GitHub repository
@@ -13,15 +13,9 @@ permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 # Social media links in footer
-twitter: "#"
-linkedin: "#"
-stackoverflow: "#"
-github: "#"
-researchgate: "#"
-orcid: "#"
-quora: "#"
-instagram: "#"
-facebook: "#"
+twitter: "heliouz__"
+tiktok: "heliouz_"
+instagram: "heliouz_"
 
 
 # Markdown
