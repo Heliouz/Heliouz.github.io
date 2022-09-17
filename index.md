@@ -13,4 +13,4 @@ También divulgo sobre ciencia e ingeniería en [TikTok](https://www.tiktok.com/
 
 >Seguro tengo un video que lo explica.
 
-En mis ratos libres y no tan libres también programo en python, donde he hecho desde [bots de twitter](https://twitter.com/BigakuSan){:target="_blank"}, aplicaciones para diseñar aleaciones de aceros avanzados y hasta mapas de México.
+En mis ratos libres y no tan libres también programo en python, donde he hecho [bots de twitter](https://twitter.com/BigakuSan){:target="_blank"}, aplicaciones para diseñar aleaciones de aceros avanzados y hasta mapas de México.
