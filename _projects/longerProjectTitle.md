@@ -19,7 +19,7 @@ Aunque me gusta pensar que tiene un sentido de la estética, sé que no es así.
 
 En realidad, Bigaku busca en Tumblr por algunos tags que yo escogí, recopila todas las imágenes y las pondera de acuerdo a qué tan virales han sido. Finalmente, cada cierto tiempo publica la imagen que considera más viral.
 
-### Ejemplos más virales:
+### Algunos ejemplos:
 
 <p align="center">
 <img src="/assets/images/bigaku/kagome.gif" alt="kagome" width="65%"/>
