@@ -20,9 +20,9 @@ En realidad, Bigaku busca en Tumblr por algunos tags que yo escogí, recopila to
 ### Algunos ejemplos:
 
 <p align="center">
-<img src="/assets/images/bigaku/kagome.gif" alt="kagome" width="70"/>
-<img src="/assets/images/bigaku/ejemplo1.gif" alt="conejito" width="70"/>
-<img src="/assets/images/bigaku/ejemplo2.gif" alt="conejito" width="70"/>
+<img src="/assets/images/bigaku/kagome.gif" alt="kagome" width="70%"/>
+<img src="/assets/images/bigaku/ejemplo1.gif" alt="conejito" width="70%"/>
+<img src="/assets/images/bigaku/ejemplo2.gif" alt="conejito" width="70%"/>
 </p>
 
   
