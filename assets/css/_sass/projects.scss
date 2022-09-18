@@ -45,7 +45,7 @@
 .projectTile a span h2 {
   font-size: 1.5rem;
   padding: 1rem;
-  color: #FFFFFF;
+  color: #F3F3F3;
 }
 
 .projectTile:hover a span h2 {
@@ -60,7 +60,7 @@
   font-size: 1.2rem;
   display: flex;
   padding: 1rem;
-  color: $text-color;
+  color: #F3F3F3;
 /*
   @media (prefers-color-scheme: dark) {
     color: $text-color-dark;
