@@ -17,7 +17,7 @@ published: true
   <div class="projectTile">
           <a href="{{ project.redirect }}" target="_blank">
           <span>
-              <h2 style="color:#F3F3F3">{{ project.title }}</h2>
+              <h2>{{ project.title }}</h2>
               <br/>
               <p>{{ project.description }}</p>
           </span>
@@ -29,7 +29,7 @@ published: true
   <div class="projectTile">
           <a href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">
           <span>
-              <h2 style="color:#F3F3F3">{{ project.title }}</h2>
+              <h2>{{ project.title }}</h2>
               <br/>
               <p>{{ project.description }}</p>
           </span>
