@@ -1,6 +1,6 @@
 ### your site title here
 
-title: Helios Ocaña
+title: Helios O.
 description: Investigo, divulgo y a veces programo.
 
 baseurl: "" #name of GitHub repository
@@ -43,7 +43,7 @@ collections:
     permalink: /projects/:name/
     order:
       - shortProject.md
-      - longerProjectTitle.md
+      - bigaku.md
       - redirect.md
       - project4.md
       - project5.md
