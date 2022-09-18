@@ -60,10 +60,10 @@
   display: flex;
   padding: 1rem;
   color: $text-color;
-
+/*
   @media (prefers-color-scheme: dark) {
     color: $text-color-dark;
-  }
+  } */
 }
 
 @include media-query($on-phone) {
