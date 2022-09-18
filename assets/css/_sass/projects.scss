@@ -37,9 +37,9 @@
   display: flex;
   justify-content: center;
   color: $text-color ;
-  @media (prefers-color-scheme: dark) {
+  /*@media (prefers-color-scheme: dark) {
     color: $text-color-dark;
-  }
+  }*/
 }
 
 .projectTile a span h2 {
