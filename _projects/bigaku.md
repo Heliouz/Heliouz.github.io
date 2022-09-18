@@ -4,7 +4,7 @@ title: Bigaku, bot de twitter.
 description: Desarrollando estética de acuerdo a imagenes virales.
 ---
 
-<img align="right" src="/assets/images/bigaku/bigaku.jpg" alt="foto de perfil de bigaku" width="175"/>
+<img align="right" src="/assets/images/bigaku/bigaku.jpg" alt="foto de perfil de bigaku" width="175" style="padding-left:10px"/>
   
 Bigaku es un que bot busca y tuitea imágenes que considera estéticas sobre anime.  De hecho, él obtuvo su propia foto de perfil.
 
