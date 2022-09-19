@@ -7,9 +7,14 @@ description: Calculadora para el rápido diseño de aceros de temple y particion
 
 QPQT es una calculadora desarrollada como parte de mi tesis de maestría que tiene como finalidad facilitar y agilizar el diseño de aceros de temple y particionado (Q&P).
 
-La calculadora tiene como entradas los porcentajes en peso del acero teórico y calcula de forma inmediata las fracciones de fase, la temperatura ideal de temple y el porcentaje de carbono. 
+La calculadora tiene como entradas los porcentajes en peso de los elementos aleantes del acero teórico y calcula de forma inmediata las fracciones de fase, la temperatura ideal de temple y el porcentaje de carbono. 
 
 Asimismo, tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción maxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
+
+<p align="center">
+<img src="/assets/images/qpqt/ss.png" alt="screenshot qpqt" width="85%"/>
+</p>
+
 
 ### Funcionamiento
 
