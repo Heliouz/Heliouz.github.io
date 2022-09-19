@@ -35,7 +35,7 @@ La interfaz gráfica y el deployment se realizó con la paquetería Dash a trav�
 Además, las gráficas son interactivas y se actualizan en tiempo real al ajustar los porcentajes en peso:
 
 <p align="center">
-<img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="50%"/>
+<img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="450"/>
 </p>
 
 ### ¿Cómo utilizarla?
