@@ -15,7 +15,7 @@ La calculadora tiene como entradas los porcentajes en peso de los elementos alea
 
 ### Otras curvas disponibles:
 
-Asimismo, la calculadora tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción maxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
+Asimismo, se tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción maxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
 
 <p align="center">
 <img src="/assets/images/qpqt/qttc.png" alt="screenshot qpqt" width="48%"/>
@@ -27,12 +27,12 @@ Asimismo, la calculadora tiene la posibilidad de graficar tanto la temperatura i
 La calculadora se programo en Python con base en el método propuesto por [Speer et al.](https://doi.org/10.1016/S1359-6454(03)00059-4) para el particionado del carbono en aceros. 
 
 
-El calculo de la temperatura de inicio de transformación martensítica ( $M_{s}$ ), así como el coeficiente $\alpha$ se hacen con base en las expresiones desarrolladas por [van Bohemen](https://doi.org/10.1179/1743284711Y.0000000097).
+El cálculo de la temperatura de inicio de transformación martensítica ( $M_{s}$ ), así como el coeficiente $\alpha$ se hacen con base en las expresiones desarrolladas por [van Bohemen](https://doi.org/10.1179/1743284711Y.0000000097).
 
 
-La interfaz gráfica y el deployment se realizo con la paquetería Dash a través de un servidor web, de forma que la calculadora puede ser utilizada por cualquier dispositivo que tenga un navegador de internet. Sin necesidad de software especializado, facilitando aún más su uso. 
+La interfaz gráfica y el deployment se realizó con la paquetería Dash a través de un servidor web, de forma que la calculadora puede ser utilizada por cualquier dispositivo que tenga un navegador de internet. Sin necesidad de software especializado, facilitando aún más su uso. 
 
-Ademas, las gráficas son interactivas:
+Además, las gráficas son interactivas y se actualizan en tiempo real al ajustar los porcentajes en peso:
 
 <p align="center">
 <img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="50%"/>
