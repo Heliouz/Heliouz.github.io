@@ -1,8 +1,9 @@
 ---
 layout: post
-title: QPQT: quench Partitioning Quench Temperature Calculator
+title: QPQT Steel Calculator
 description: Calculadora para el rápido diseño de aceros de temple y particionado.
 ---
+
 
 QPQT es una calculadora desarrollada como parte de mi tesis de maestría que tiene como finalidad facilitar y agilizar el diseño de aceros de temple y particionado (Q&P).
 
