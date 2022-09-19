@@ -1,6 +1,6 @@
 ---
 layout: post
-title: QPQT: Quench Partitioning Quench Temperature Calculator
+title: QPQT, quench Partitioning Quench Temperature Calculator
 description: Calculadora para el rápido diseño de aceros de temple y particionado.
 ---
 
