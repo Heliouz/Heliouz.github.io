@@ -10,6 +10,6 @@ Me puedes contactar por alguna de mis redes sociales: [Twitter](https://twitter.
 
 O si lo prefieres por correo a:
 
-<img align="left" src="/assets/images/correu.png" width="350"/>
+<img align="left" src="/assets/images/correu.png" width="300"/>
 
 <br>
