@@ -44,8 +44,8 @@ collections:
     order:
       - shortProject.md
       - bigaku.md
-      - redirect.md
       - qpqt.md
+      - redirect.md
       - project5.md
       - project6.md
 
