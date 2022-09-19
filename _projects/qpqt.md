@@ -30,9 +30,14 @@ La calculadora se programo en Python con base en el método propuesto por [Speer
 El calculo de la temperatura de inicio de transformación martensítica ( $M_{s}$ ), así como el coeficiente $\alpha$ se hacen con base en las expresiones desarrolladas por [van Bohemen](https://doi.org/10.1179/1743284711Y.0000000097).
 
 
-La interfaz gráfica se realizo con la paquetería Dash lo que da com resultado gráficas interactivas accesibles mediante un servidor web desde cualquier dispositivo:
+La interfaz gráfica y el deployment se realizo con la paquetería Dash a través de un servidor web, de forma que la calculadora puede ser utilizada por cualquier dispositivo que tenga un navegador de internet. Sin necesidad de software especializado, facilitando aún más su uso. 
+
+Ademas, las gráficas son interactivas:
 
 <p align="center">
 <img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="50%"/>
 </p>
 
+### Cómo utilizarla
+
+Esta aplicación no es pública pero si te interesa puedes mandarme un correo. [Contacto](/contacto/)
