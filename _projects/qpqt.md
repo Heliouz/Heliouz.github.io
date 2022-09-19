@@ -40,4 +40,4 @@ Ademas, las gráficas son interactivas:
 
 ### ¿Cómo utilizarla?
 
-Esta aplicación no es pública pero si te interesa puedes mandarme un correo. [Contacto](/contacto/)
+Esta aplicación no es pública pero si te interesa puedes mandarme un correo -> [Contacto](/contacto/)
