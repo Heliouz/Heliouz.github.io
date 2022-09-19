@@ -4,8 +4,10 @@ layout: default
 permalink: /contacto/
 published: true
 ---
+<img align="right" src="/assets/images/plane.png" width="175" style="padding-right:50px"/>
 
-Me puedes contactar por estos medios
+Me puedes contactar por alguna de mis redes sociales: [Twitter](https://twitter.com/Heliouz__), [Instagram](https://www.instagram.com/heliouz_/), [TikTok](https://www.tiktok.com/@heliouz_).
 
-{{ 'example@example.com' | encode_email }}
-<a href="mailto:{{ example@example.com | encode_email }}" title="Contact me">Contact me</a>
+O si lo prefieres por correo a:
+
+<img align="left" src="/assets/images/correu.png" width="175"/>
