@@ -14,4 +14,4 @@ Asimismo, tiene la posibilidad de graficar tanto la temperatura ideal de temple 
 
 La calculadora se programo en Python con base en el método propuesto por [Speer et al.](https://doi.org/10.1016/S1359-6454(03)00059-4) para el particionado del carbono en aceros. 
 
-El calculo de la temperatura de inicio de transformación martensítica ($$M_{s}$$), así como el coeficiente $$\alpha $$ se hacen con base en las expresiones desarrolladas por [van Bohemen](https://doi.org/10.1179/1743284711Y.0000000097).
+El calculo de la temperatura de inicio de transformación martensítica ( $M_{s}$ ), así como el coeficiente $\alpha$ se hacen con base en las expresiones desarrolladas por [van Bohemen](https://doi.org/10.1179/1743284711Y.0000000097).
