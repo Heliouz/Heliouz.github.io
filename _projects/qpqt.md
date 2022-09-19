@@ -13,7 +13,7 @@ La calculadora tiene como entradas los porcentajes en peso de los elementos alea
 <img src="/assets/images/qpqt/ss.png" alt="screenshot qpqt" width="100%"/>
 </p>
 
-### Otras funciones
+### Otras curvas disponibles
 
 Asimismo, la calculadora tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción maxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
 
