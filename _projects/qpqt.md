@@ -13,7 +13,7 @@ La calculadora tiene como entradas los porcentajes en peso de los elementos alea
 <img src="/assets/images/qpqt/ss.png" alt="screenshot qpqt" width="100%"/>
 </p>
 
-### Otras curvas disponibles
+### Otras curvas disponibles:
 
 Asimismo, la calculadora tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción maxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
 
@@ -22,7 +22,7 @@ Asimismo, la calculadora tiene la posibilidad de graficar tanto la temperatura i
 <img src="/assets/images/qpqt/qtta.png" alt="screenshot qpqt" width="48%"/>
 </p>
 
-### Funcionamiento
+### Funcionamiento:
 
 La calculadora se programo en Python con base en el método propuesto por [Speer et al.](https://doi.org/10.1016/S1359-6454(03)00059-4) para el particionado del carbono en aceros. 
 
@@ -38,6 +38,6 @@ Ademas, las gráficas son interactivas:
 <img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="50%"/>
 </p>
 
-### Cómo utilizarla
+### ¿Cómo utilizarla?
 
 Esta aplicación no es pública pero si te interesa puedes mandarme un correo. [Contacto](/contacto/)
