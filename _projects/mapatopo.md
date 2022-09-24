@@ -6,4 +6,6 @@ description: Mapa topográfico de México hecho en Python
 
 <script type="text/javascript" src="/assets/js/pts.min.js"></script>
 
+<canvas id="hello" style="width:100%"></canvas>
+
 <script type="text/javascript" src="/assets/js/test.js"></script>
