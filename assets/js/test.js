@@ -1,6 +1,6 @@
 // setup
 Pts.namespace(this);
-var space = new CanvasSpace("#hello").setup({ bgcolor: "#fff" });
+var space = new CanvasSpace("#hello").setup({ bgcolor: "#123" });
 var form = space.getForm();
 
   var pairs = [];
