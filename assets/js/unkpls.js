@@ -1,30 +1,13 @@
-(function() {
-  const canvas = document.getElementById('canvas');
-  const context = canvas.getContext('2d');
-
-  // resize the canvas to fill browser window dynamically
-  window.addEventListener('resize', resizeCanvas, false);
-        
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-                
-    /**
-     * Your drawings need to be inside this function otherwise they will be reset when 
-     * you resize the browser window and the canvas goes will be cleared.
-     */
-    drawStuff(); 
-  }
-  
-  resizeCanvas();
-        
-  function drawStuff() {
-    var canvas = document.getElementById("canvas");
+/*
+p5 noise
+https://codepen.io/enxaneta/pen/7e315d161a8ee073ded48ab5d1669290
+*/
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var c = {}
-var cw = canvas.width = 600;
+var cw = canvas.width = 500;
 c.x = cw / 2;
-var ch = canvas.height = 600;
+var ch = canvas.height = 300;
 c.y = ch / 2;
 ctx.lineJoin = "round";
 ctx.strokeStyle = "#0D3251";
@@ -34,9 +17,9 @@ ctx.fillStyle = "#f3f3f3"; //HERE, use HEX format in 6 digits
 var rad = Math.PI / 180;
 var x, y;
 
-var amplitude = 5;
+var amplitude = 6;
 var frequency = .02;
-var phi = 0;
+var phi = 2;
 
 var increment = 0.05;
 var lines = [];
@@ -103,15 +86,3 @@ function map(n, a, b, _a, _b) {
   var u = _d / d;
   return _a + (n - a) * u;
 }
-
-  }
-})();
-
-
-
-
-
-
-
-
-
