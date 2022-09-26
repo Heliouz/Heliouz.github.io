@@ -5,8 +5,9 @@ description: Mapa topográfico de México hecho en Python
 ---
 
 <canvas id="canvas"></canvas>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js" integrity="sha512-rCZdHNB0AePry6kAnKAVFMRfWPmUXSo+/vlGtrOUvhsxD0Punm/xWbEh+8vppPIOzKB9xnk42yCRZ5MD/jvvjQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script>
+  
 /*
 p5 noise
 https://codepen.io/enxaneta/pen/7e315d161a8ee073ded48ab5d1669290
