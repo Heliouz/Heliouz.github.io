@@ -1,8 +1,25 @@
-/*
-p5 noise
-https://codepen.io/enxaneta/pen/7e315d161a8ee073ded48ab5d1669290
-*/
-var canvas = document.getElementById("canvas");
+(function() {
+  const canvas = document.getElementById('canvas');
+  const context = canvas.getContext('2d');
+
+  // resize the canvas to fill browser window dynamically
+  window.addEventListener('resize', resizeCanvas, false);
+        
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+                
+    /**
+     * Your drawings need to be inside this function otherwise they will be reset when 
+     * you resize the browser window and the canvas goes will be cleared.
+     */
+    drawStuff(); 
+  }
+  
+  resizeCanvas();
+        
+  function drawStuff() {
+    var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var c = {}
 var cw = canvas.width = 600;
@@ -86,3 +103,15 @@ function map(n, a, b, _a, _b) {
   var u = _d / d;
   return _a + (n - a) * u;
 }
+
+  }
+})();
+
+
+
+
+
+
+
+
+
