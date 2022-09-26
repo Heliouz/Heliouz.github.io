@@ -13,7 +13,7 @@ description: Mapa topográfico de México hecho en Python
 <script type="text/javascript" src="/assets/js/unkpls.js"></script>
 
 
-<img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="100%"/>
+<img src="/assets/images/mapatopo/" alt="mapamex" width="100%"/>
 
 <div style="text-align: center">
   <canvas id="canvas" style="width:100%; padding: 0;"></canvas>
