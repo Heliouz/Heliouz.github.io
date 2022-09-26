@@ -4,7 +4,7 @@ title: Mapa de México a lo Joy Division
 description: Mapa topográfico de México hecho en Python
 ---
 
-<canvas id="canvas">https://www.youtube.com/watch?v=jxGS3fKPKJA</canvas>
+<canvas id="canvas"></canvas>
 
 <script>
 /*
