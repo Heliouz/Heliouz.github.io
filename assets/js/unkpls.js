@@ -5,9 +5,9 @@ https://codepen.io/enxaneta/pen/7e315d161a8ee073ded48ab5d1669290
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var c = {}
-var cw = canvas.width = 300;
+var cw = canvas.width = 600;
 c.x = cw / 2;
-var ch = canvas.height = 500;
+var ch = canvas.height = 200;
 c.y = ch / 2;
 ctx.lineJoin = "round";
 ctx.strokeStyle = "#0D3251";
