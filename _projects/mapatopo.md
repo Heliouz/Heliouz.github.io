@@ -6,75 +6,9 @@ description: Mapa topográfico de México hecho en Python
 
 <canvas id="canvas"></canvas>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+<script type="text/javascript" src="/assets/js/noisep5.js"></script>
 <script>
-  
-/*
-p5 noise
-https://codepen.io/enxaneta/pen/7e315d161a8ee073ded48ab5d1669290
-*/
-function noise(x,y,z) {
-  y = y || 0;
-  z = z || 0;
-
-  if (perlin == null) {
-    perlin = new Array(PERLIN_SIZE + 1);
-    for (var i = 0; i < PERLIN_SIZE + 1; i++) {
-      perlin[i] = Math.random();
-    }
-  }
-
-  if (x<0) { x=-x; }
-  if (y<0) { y=-y; }
-  if (z<0) { z=-z; }
-
-  var xi=Math.floor(x), yi=Math.floor(y), zi=Math.floor(z);
-  var xf = x - xi;
-  var yf = y - yi;
-  var zf = z - zi;
-  var rxf, ryf;
-
-  var r=0;
-  var ampl=0.5;
-
-  var n1,n2,n3;
-
-  for (var o=0; o<perlin_octaves; o++) {
-    var of=xi+(yi<<PERLIN_YWRAPB)+(zi<<PERLIN_ZWRAPB);
-
-    rxf = scaled_cosine(xf);
-    ryf = scaled_cosine(yf);
-
-    n1  = perlin[of&PERLIN_SIZE];
-    n1 += rxf*(perlin[(of+1)&PERLIN_SIZE]-n1);
-    n2  = perlin[(of+PERLIN_YWRAP)&PERLIN_SIZE];
-    n2 += rxf*(perlin[(of+PERLIN_YWRAP+1)&PERLIN_SIZE]-n2);
-    n1 += ryf*(n2-n1);
-
-    of += PERLIN_ZWRAP;
-    n2  = perlin[of&PERLIN_SIZE];
-    n2 += rxf*(perlin[(of+1)&PERLIN_SIZE]-n2);
-    n3  = perlin[(of+PERLIN_YWRAP)&PERLIN_SIZE];
-    n3 += rxf*(perlin[(of+PERLIN_YWRAP+1)&PERLIN_SIZE]-n3);
-    n2 += ryf*(n3-n2);
-
-    n1 += scaled_cosine(zf)*(n2-n1);
-
-    r += n1*ampl;
-    ampl *= perlin_amp_falloff;
-    xi<<=1;
-    xf*=2;
-    yi<<=1;
-    yf*=2;
-    zi<<=1;
-    zf*=2;
-
-    if (xf>=1.0) { xi++; xf--; }
-    if (yf>=1.0) { yi++; yf--; }
-    if (zf>=1.0) { zi++; zf--; }
-  }
-  return r;
-};
-  
+   
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var c = {}
