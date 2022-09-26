@@ -6,8 +6,8 @@ c.x = cw / 2;
 var ch = canvas.height = 200;
 c.y = ch / 2;
 ctx.lineJoin = "round";
-ctx.strokeStyle = "#fff";
-ctx.fillStyle = "rgba(0,0,0,1)";
+ctx.strokeStyle = "#0D3251";
+ctx.fillStyle = "rgba(0,0,0,.2)";
 var rad = Math.PI / 180;
 var x, y;
 
