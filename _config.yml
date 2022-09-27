@@ -60,6 +60,8 @@ exclude:
   - README.md
   - LICENSE.md
   - archive.html
+  - blog/
+  - _posts/
 
 plugins:
   - jekyll-seo-tag
