@@ -10,7 +10,8 @@ description: description of the short project which is long enough
                         line-height:0.5;
                         letter-spacing: 0em;
                         display: inline-block;
-                        border: 0;"></pre>
+                        border: 0;
+                        color: #0D3251"></pre>
   
 </div>
 
