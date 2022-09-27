@@ -36,5 +36,5 @@ description: Estudios artísticos de la geografía mexicana
 <script type="text/javascript" src="/assets/js/unkpls.js"></script>
 
 
-<img src="/assets/images/mapatopo/" alt="mapamex" width="100%"/>
+<img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="100%"/>
 
