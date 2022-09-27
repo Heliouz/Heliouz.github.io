@@ -8,16 +8,16 @@ import GlitchedWriter, {
 const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
 (async  ()=> {
   
-  await wait(1000);
+  await wait(800);
   await Writer.write("capas");
   
-  await wait(1200);
+  await wait(1000);
   await Writer.write("mapas");
   
-  await wait(1500);
+  await wait(1100);
   await Writer.write("datos");
   
-   await wait(1000);
+   await wait(800);
   await Writer.write("geografías");
   
   await wait(1000);
