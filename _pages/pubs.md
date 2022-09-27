@@ -5,7 +5,12 @@ permalink: /pubs/
 published: true
 ---
 
+<br>
+
 ### Publicaciones:
 
-Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS
-:   Ocaña Helios, 2019, Tesis UNAM
+* Breve historia del temple: de las espadas a los automóviles modernos
+:   Publicado en _Materiales Avanzados_, 2022
+
+* Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS
+:   Publicado en _Tesis UNAM_, 2019. 
