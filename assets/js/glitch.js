@@ -5,7 +5,7 @@ import GlitchedWriter, {
 // Glitched Writer npm module:
 // https://www.npmjs.com/package/glitched-writer
 
-const Writer = new GlitchedWriter('#glitch_this', { letterize: true }, logString);
+const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
 Writer.endless(true)
 (async  ()=> {
   await wait(1000);
