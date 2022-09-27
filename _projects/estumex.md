@@ -8,7 +8,7 @@ Estudios de la geografía mexicana.
 ### Reinterpretando 
 
 <script type="module" src="/assets/js/glitch.js"></script>
-<div class="text" id="glitch_this"> <h4> Geografías </h4></div>
+<div class="h4" id="glitch_this">Geografías</div>
 
 <div style="text-align: center">
   
