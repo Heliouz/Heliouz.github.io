@@ -12,7 +12,7 @@ writer.endless(true)
   await Writer.write("capas");
   
   await wait(1200);
-  await Writer.write("m̸̢̡̧̗̪͕̳͖̺̞̺͈̼̝̖͎̜̤̙͉͇̀̀̓̿̐̆̌̄͆͛͌̈́͊͌̈́͘͝ͅǎ̸͖̩̳̲̩̰̘͓͚͓͔̟̞̦̲͓̖͕͔͙̉̌͛̐̐̀͘͘͜͝p̵͉̌̅̃̅̋̀̌͠͠ą̵̰͙̯̖̖̜̹̤̥̖̣̰̥̰͖̗̫̓͌̒̅ͅs̵̡̺͓͔̩̩͇̻̺̮̖̤̺̹̗͕̬̦̅̉̊̌̈́̈́̒͆̓̃̐͝");
+  await Writer.write("mapas");
   
   await wait(1500);
   await Writer.write("datos");
@@ -20,13 +20,7 @@ writer.endless(true)
   input.removeAttribute("disabled");
 })();
 
-function logString(string) {
-  logs.innerHTML += `<p>${string}</p>`;
-}
 
-input.addEventListener(
-  "input",
-  _.debounce(() => 
-    Writer.write(input.value)
-  , 500)
+
+
 );
