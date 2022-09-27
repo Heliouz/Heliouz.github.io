@@ -15,7 +15,7 @@ published: true
 
 <ul>
   <li>
-    <a href="[https://www.WordPress.com](https://www.iim.unam.mx/MA/36)" target="_blank">Breve historia del temple: de las espadas a los automóviles modernos</a>
+    <a href="https://www.iim.unam.mx/MA/36" target="_blank">Breve historia del temple: de las espadas a los automóviles modernos</a>
   </li>
   <li>Tea</li>
   <li>Milk</li>
