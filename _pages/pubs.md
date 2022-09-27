@@ -5,8 +5,6 @@ permalink: /pubs/
 published: true
 ---
 
-<br>
-
 ### Publicaciones:
 
 * [Breve historia del temple: de las espadas a los automóviles modernos](https://www.iim.unam.mx/MA/36)
