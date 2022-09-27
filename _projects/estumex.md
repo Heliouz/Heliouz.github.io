@@ -5,10 +5,11 @@ description: Estudios artísticos de la geografía mexicana
 ---
 Estudios de la geografía mexicana. 
 
-Reinterpretando <div style="text-align: right"><h4>mapas</h4></div>
-<div style="text-align: center"><h4>capas</h4></div>
+Reinterpretando 
+<div style="text-align: right"><h4>mapas</h4></div>
+<div style="text-align: center; font-family: monospace"><h4>capas</h4></div>
 <div style="text-align: left"><h4>texturas</h4></div>
-<div style="text-align: right"><h4>datos</h4></div>
+<div style="text-align: right; font-family: Courier New"><h4>datos</h4></div>
 
 #### Geografías
 
