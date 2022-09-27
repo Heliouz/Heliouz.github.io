@@ -7,6 +7,8 @@ import GlitchedWriter, {
 
 const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
 (async  ()=> {
+  Writer.endless(true);
+  
   await wait(1000);
   await Writer.write("capas");
   
@@ -16,5 +18,4 @@ const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
   await wait(1500);
   await Writer.write("datos");
   
-  Writer.endless(true);
 })();
