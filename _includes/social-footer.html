@@ -3,7 +3,7 @@
 {%- if site.email -%}
 <a title="{{ _locale_string_email }}"
 class="social-button email" itemprop="email"
-href="mailto:{{ site.email | encode_email }}" target="_blank">
+href="{{site.baseurl}}/contacto/" target="_blank">
 <i class="far fa-envelope"></i>
 </a>
 {%- endif -%}
