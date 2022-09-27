@@ -12,7 +12,7 @@ description: Estudios artísticos de la geografía mexicana
 
 <script type="module" src="/assets/js/glitch.js"></script>
 <h4>
-<div class="text" id="glitch_this">Geografías</div>
+<div class="text" id="glitch_this">&nbsp;&nbsp;&nbsp;&nbsp;Geografías</div>
 </h4>
 <div style="text-align: center">
   
