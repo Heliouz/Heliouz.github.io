@@ -6,16 +6,16 @@ import GlitchedWriter, {
 // https://www.npmjs.com/package/glitched-writer
 
 const Writer = new GlitchedWriter('#glitch_this', { letterize: true }, logString);
-
+writer.endless(true)
 (async  ()=> {
   await wait(1000);
-  await Writer.write("my old friend.");
+  await Writer.write("capas");
   
   await wait(1200);
-  await Writer.write("This is only the beginning.");
+  await Writer.write("m̸̢̡̧̗̪͕̳͖̺̞̺͈̼̝̖͎̜̤̙͉͇̀̀̓̿̐̆̌̄͆͛͌̈́͊͌̈́͘͝ͅǎ̸͖̩̳̲̩̰̘͓͚͓͔̟̞̦̲͓̖͕͔͙̉̌͛̐̐̀͘͘͜͝p̵͉̌̅̃̅̋̀̌͠͠ą̵̰͙̯̖̖̜̹̤̥̖̣̰̥̰͖̗̫̓͌̒̅ͅs̵̡̺͓͔̩̩͇̻̺̮̖̤̺̹̗͕̬̦̅̉̊̌̈́̈́̒͆̓̃̐͝");
   
   await wait(1500);
-  await Writer.write("Please, say something...");
+  await Writer.write("datos");
   
   input.removeAttribute("disabled");
 })();
