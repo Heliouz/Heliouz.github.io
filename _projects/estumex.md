@@ -12,7 +12,7 @@ Reinterpretando
 <div style="text-align: right"><h4>datos</h4></div>
 
 #### Geografías
-<script type="text/javascript" src="/assets/js/glitch.js"></script>
+<script type="module" src="/assets/js/glitch.js"></script>
 <div class="text" id="glitch_this">Geografías</div>
 
 <div style="text-align: center">
