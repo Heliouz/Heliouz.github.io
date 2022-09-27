@@ -5,6 +5,8 @@ description: Calculadora para el rápido diseño de aceros de temple y particion
 ---
 
 
+### QP:QT Quench & Partitioning: Quench Calculator
+
 QPQT es una calculadora desarrollada como parte de mi tesis de maestría que tiene como finalidad facilitar y agilizar el diseño de aceros de temple y particionado (Q&P).
 
 La calculadora tiene como entradas los porcentajes en peso de los elementos aleantes del acero teórico y calcula de forma inmediata las fracciones de fase, la temperatura ideal de temple y el porcentaje de carbono. 
@@ -13,7 +15,7 @@ La calculadora tiene como entradas los porcentajes en peso de los elementos alea
 <img src="/assets/images/qpqt/ss.png" alt="screenshot qpqt" width="100%"/>
 </p>
 
-### Otras curvas disponibles:
+#### Otras curvas disponibles:
 
 Asimismo, se tiene la posibilidad de graficar tanto la temperatura ideal de temple como la fracción máxima de austenita retenida con respecto al porcentaje de carbono de la aleación.
 
@@ -22,7 +24,7 @@ Asimismo, se tiene la posibilidad de graficar tanto la temperatura ideal de temp
 <img src="/assets/images/qpqt/qtta.png" alt="screenshot qpqt" width="48%"/>
 </p>
 
-### Funcionamiento:
+#### Funcionamiento:
 
 La calculadora se programó en Python con base en el método propuesto por [Speer et al.](https://doi.org/10.1016/S1359-6454(03)00059-4) para el particionado del carbono en aceros. 
 
@@ -38,6 +40,6 @@ Además, las gráficas son interactivas y se actualizan en tiempo real al ajusta
 <img src="/assets/images/qpqt/zoom.gif" alt="screenshot qpqt" width="450"/>
 </p>
 
-### ¿Cómo utilizarla?
+#### ¿Cómo utilizarla?
 
 Esta aplicación no es pública pero si te interesa puedes mandarme un correo -> [Contacto](/contacto/)
