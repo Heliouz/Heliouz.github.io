@@ -14,12 +14,12 @@ Bigaku es un que bot busca y tuitea imágenes que considera estéticas sobre ani
 
 Bigaku fue programado en Python y ha estado publicando imágenes sin parar desde abril del 2020. [Aquí puedes verlo en acción](https://twitter.com/BigakuSan)
 
-### ¿Cómo un bot puede tener sentido estético?
+#### ¿Cómo un bot puede tener sentido estético?
 Aunque me gusta pensar que tiene un sentido de la estética, sé que no es así. 
 
 En realidad, Bigaku busca en Tumblr por algunos tags que yo escogí, recopila todas las imágenes y las pondera de acuerdo a qué tan virales han sido. Finalmente, cada cierto tiempo publica la imagen que considera más viral, logrando así una estética con base en los criterios de mucha gente en internet.
 
-### Algunos ejemplos:
+#### Algunos ejemplos:
 
 <p align="center">
 <img src="/assets/images/bigaku/kagome.gif" alt="kagome" width="70%"/>
