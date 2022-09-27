@@ -5,7 +5,7 @@ permalink: /pubs/
 published: true
 ---
 
-
+<hr style="height:10px; visibility:hidden;" />
 
 ### Publicaciones:
 
