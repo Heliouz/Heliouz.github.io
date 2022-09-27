@@ -9,7 +9,7 @@ var Boid = function ( x, y, angle, gen ) {
   this.gen = gen;
   this.dead = false;
   this.dist = dist(this.x, this.y, width/2, height/2);
-  this.hue = Math.random() * 120;
+  this.hue = 207;
   this.update = function () {
     roads_context.strokeStyle = '#808080';
     roads_context.beginPath();
@@ -24,7 +24,7 @@ var Boid = function ( x, y, angle, gen ) {
     roads_context.stroke();
     
     var trail = Math.random() * ( (50-10) * ((this.dist/width)*2) )+10;
-    var color = {h: this.hue,s:"60%",l:"50%"}
+    var color = {h: this.hue,s:"60%",l:"40%"}
     watercolor_context.strokeStyle="hsla("+color.h+","+color.s+","+color.l+",0.1)";
     watercolor_context.lineWidth=2;
     for ( var i = 0; i < 5; i ++ ) {
@@ -62,8 +62,8 @@ var dist = function(x1,y1,x2,y2){
 }
 
 
-var width = 1500;
-var height = 1500;
+var width = 800;
+var height = 1000;
 
 var canvas = document.getElementById( 'world' );
 canvas.width = width;
