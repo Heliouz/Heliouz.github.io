@@ -6,10 +6,10 @@ description: Estudios artísticos de la geografía mexicana
 Estudios de la geografía mexicana. 
 
 Reinterpretando 
-<div style="text-align: right"><h4>mapas</h4></div>
-<div style="text-align: center; font-family: monospace"><h4>capas</h4></div>
+<div style="text-align: right"><h4>m̸̢̡̧̗̪͕̳͖̺̞̺͈̼̝̖͎̜̤̙͉͇̀̀̓̿̐̆̌̄͆͛͌̈́͊͌̈́͘͝ͅǎ̸͖̩̳̲̩̰̘͓͚͓͔̟̞̦̲͓̖͕͔͙̉̌͛̐̐̀͘͘͜͝p̵͉̌̅̃̅̋̀̌͠͠ą̵̰͙̯̖̖̜̹̤̥̖̣̰̥̰͖̗̫̓͌̒̅ͅs̵̡̺͓͔̩̩͇̻̺̮̖̤̺̹̗͕̬̦̅̉̊̌̈́̈́̒͆̓̃̐͝</h4></div>
+<div style="text-align: center; font-family: "monospace", sans-serif"><h4>capas</h4></div>
 <div style="text-align: left"><h4>texturas</h4></div>
-<div style="text-align: right; font-family: Courier New"><h4>datos</h4></div>
+<div style="text-align: right; font-family: "Courier New", sans-serif"><h4>datos</h4></div>
 
 #### Geografías
 
