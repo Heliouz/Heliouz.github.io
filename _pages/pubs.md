@@ -10,10 +10,12 @@ published: true
 ### Publicaciones:
 
 [Breve historia del temple: de las espadas a los automóviles modernos](https://www.iim.unam.mx/MA/36){:target="_blank"}
-:   Publicado en _Materiales Avanzados_, 2022
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Materiales Avanzados_, 2022
+
+<br>
 
 Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS
-:   Publicado en _Tesis UNAM_, 2019. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, 2019. 
 
 
 
