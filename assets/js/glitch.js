@@ -16,11 +16,4 @@ Writer.endless(true)
   
   await wait(1500);
   await Writer.write("datos");
-  
-  
 })();
-
-
-
-
-);
