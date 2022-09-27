@@ -20,4 +20,13 @@ const Writer = new GlitchedWriter('#glitch_this', { letterize: true }, logString
   input.removeAttribute("disabled");
 })();
 
+function logString(string) {
+  logs.innerHTML += `<p>${string}</p>`;
+}
+
+input.addEventListener(
+  "input",
+  _.debounce(() => 
+    Writer.write(input.value)
+  , 500)
 );
