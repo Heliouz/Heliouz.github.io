@@ -9,8 +9,6 @@ description: description of the short project which is long enough
                         font-family: Consolas,Courier,monospace; font-size:10px;
                         line-height:0.5;
                         letter-spacing: 0em;
-                        display: table;
-                        border-collapse: separate;
                         border: 0;
                         color: #0D3251"></pre>
   
