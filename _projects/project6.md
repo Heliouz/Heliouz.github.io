@@ -4,139 +4,129 @@ title: Project 6
 description: another project
 ---
 
-Example modified from [here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html){:target="_blank"}.
+<canvas id='world'></canvas>
 
-H1 Header
-============
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js">
+var Boid = function ( x, y, angle, gen ) {
+  this.x = x;
+  this.y = y;
 
-Paragraphs are separated by a blank line.
+  this.angle = Math.pow( Math.random(), 10 ) + angle;
+  this.dx = Math.cos( this.angle );
+  this.dy = Math.sin( this.angle );
+  this.life = Math.random() * 30 + 10;
+  this.gen = gen;
+  this.dead = false;
+  this.dist = dist(this.x, this.y, width/2, height/2);
+  this.hue = Math.random() * 120;
+  this.update = function () {
+    roads_context.strokeStyle = '#808080';
+    roads_context.beginPath();
+    roads_context.moveTo( this.x, this.y );
 
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
+    this.x += this.dx * 2; 
+    this.y += this.dy * 2;
+    
+    this.dist = dist(this.x, this.y, width/2, height/2);
+    
+    roads_context.lineTo( this.x, this.y );
+    roads_context.stroke();
+    
+    var trail = Math.random() * ( (50-10) * ((this.dist/width)*2) )+10;
+    var color = {h: this.hue,s:"60%",l:"50%"}
+    watercolor_context.strokeStyle="hsla("+color.h+","+color.s+","+color.l+",0.1)";
+    watercolor_context.lineWidth=2;
+    for ( var i = 0; i < 5; i ++ ) {
+      watercolor_context.beginPath();
+      watercolor_context.moveTo( this.x, this.y );
+      var px = this.x + Math.cos( this.angle + 90)*(i*(trail/10));
+      var py = this.y + Math.sin( this.angle + 90)*(i*(trail/10));
+      watercolor_context.lineTo(px,py);
+      watercolor_context.stroke();
+    }
+    
+    var index = ( Math.floor( this.x ) + width * Math.floor( this.y ) ) * 4;
 
-  * this one
-  * that one
-  * the other one
+    if ( this.gen >=  this.life ) this.kill();
+    if ( data[ index + 3 ] > 0 ) {
+      this.kill();
+      blocks++;
+    }
 
-Note that the actual text
-content starts at 4-columns in.
+    if ( this.x < 0 || this.x > width ) this.kill();						
+    if ( this.y < 0 || this.y > height ) this.kill();
 
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+  }
 
+  this.kill = function () {
 
-H2 Header
-------------
+    boids.splice( boids.indexOf( this ), 1 );
+    this.dead = true;
 
-Here's a numbered list:
+  }
 
- 1. first item
- 2. second item
- 3. third item
-
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
-
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
-
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
-
-~~~
-define foobar() {
-    print "Welcome to flavor country!";
 }
-~~~
-
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it by specifying the languagae after the start of a block (e.g. `~~~python`) which would look like :
-
-~~~python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print(i)
-~~~
-
-### An H3 header ###
-
-Now a nested list:
-
- 1. First, get these ingredients:
-
-      * carrots
-      * celery
-      * lentils
-
- 2. Boil some water.
-
- 3. Dump everything in the pot and follow
-    this algorithm:
-
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
-
-    Do not bump wooden spoon or it will fall.
-
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).
-
-Here's a footnote [^1].
-
-[^1]: Some footnote text.
-
-Tables can look like this:
-
-| Header 1 | Header 2                   | Header 3 |
-|:--------:|:--------------------------:|:--------:|
-| data1a   | Data is longer than header | 1        |
-| d1b      | add a cell                 |          |
-| lorem    | ipsum                      | 3        |
-|          | empty outside cells        |          |
-| skip     |                            | 5        |
-| six      | Morbi purus                | 6        |
+var dist = function(x1,y1,x2,y2){
+  return Math.sqrt( (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2) );
+}
 
 
-A horizontal rule follows.
+var width = 1500;
+var height = 1500;
 
-***
+var canvas = document.getElementById( 'world' );
+canvas.width = width;
+canvas.height = height;
 
-Here's a definition list:
+roads_canvas = document.createElement('canvas');
+roads_canvas.width = width;
+roads_canvas.height = height;
+roads_context = roads_canvas.getContext('2d');
 
-apples
-  : Good for making applesauce.
+watercolor_canvas = document.createElement('canvas');
+watercolor_canvas.width = width;
+watercolor_canvas.height = height;
+watercolor_context = watercolor_canvas.getContext('2d');
 
-oranges
-  : Citrus!
+var context = canvas.getContext( '2d' );
+var image, data;
 
-tomatoes
-  : There's no "e" in tomatoe.
+var boids = [];
 
-Again, text is indented 4 spaces. (Put a blank line between each
-term and  its definition to spread things out more.)
+var blocks = 0;
 
-Here's a "line block" (note how whitespace is honored):
+boids.push( new Boid( width / 2, height / 2, Math.random() * 180 * Math.PI / 180, 0) );
 
-| Line one
-|   Line too
-| Line tree
+var drawing = setInterval( function () {
 
-and images can be specified like so:
+  image = roads_context.getImageData( 0, 0, width, height );
+  data = image.data;
+  for ( var i = 0; i < boids.length; i ++ ) {
 
-![example image](https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=300&h=300&fit=crop "An exemplary image")
+    var boid = boids[ i ];
+    boid.update();
+    // Looks messy but just sets a range
+    var n =( (0.9-0.6) * ((boid.dist/width)*2) )+0.6;
+    if ( !boid.dead && Math.random() > n && boids.length < 400 ) {
+      boids.push( new Boid( boid.x, boid.y, ( Math.random() > 0.5 ? 90 : - 90 ) * Math.PI / 180 + boid.angle, boid.gen+1 ) );
+    }
+    
+  }
+  context.clearRect(0, 0, width, height);
+  context.globalAlpha = 0.5;
+  context.drawImage(watercolor_canvas, 0, 0);
+  context.globalAlpha = 1;
+  context.drawImage(roads_canvas, 0, 0); 
+  
+  if(boids.length == 0 ){
+    clearInterval(drawing);
+    console.log(blocks + " city blocks.");
+  } 
+}, 1000 / 60 );
 
-Inline math equation: $\omega = d\phi / dt$. Display
-math should get its own line like so:
 
-$$I = \int \rho R^{2} dV$$
+
+
+
+
+</script>
