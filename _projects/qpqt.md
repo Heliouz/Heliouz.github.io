@@ -5,7 +5,7 @@ description: Calculadora para el rápido diseño de aceros de temple y particion
 ---
 
 
-### QP:QT Quench & Partitioning: Quench Calculator
+### QP:QT. Quench & Partitioning: Quench Calculator
 
 QPQT es una calculadora desarrollada como parte de mi tesis de maestría que tiene como finalidad facilitar y agilizar el diseño de aceros de temple y particionado (Q&P).
 
