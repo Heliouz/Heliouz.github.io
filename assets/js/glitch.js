@@ -6,7 +6,6 @@ import GlitchedWriter, {
 // https://www.npmjs.com/package/glitched-writer
 
 const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
-Writer.endless(true);
 (async  ()=> {
   await wait(1000);
   await Writer.write("capas");
@@ -16,4 +15,6 @@ Writer.endless(true);
   
   await wait(1500);
   await Writer.write("datos");
+  
+  Writer.endless(true);
 })();
