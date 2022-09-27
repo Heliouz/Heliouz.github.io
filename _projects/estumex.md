@@ -3,7 +3,8 @@ layout: post
 title: Reinterpretando el mapa de México
 description: Estudios artísticos de la geografía mexicana
 ---
-Estudios de la geografía mexicana. 
+
+### Estudios de &nbsp;&nbsp; la &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; geografía &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mexicana. 
 
 ### Reinterpretando 
 
