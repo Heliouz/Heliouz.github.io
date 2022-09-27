@@ -5,12 +5,12 @@ galite('create', 'UA-XXXXXXXX-X', 'auto')
 galite('send', 'pageview')
 </script>
 -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQ04J6KFPR"></script>
 <script>
-(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-;c.parentNode.insertBefore(a,c)
-})(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-galite('create', 'G-LQ04J6KFPR', 'auto');
-galite('send', 'pageview');
+  gtag('config', 'G-LQ04J6KFPR');
 </script>
