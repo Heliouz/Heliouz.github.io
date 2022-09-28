@@ -5,7 +5,7 @@ description: Generador de mapas de méxico (pero feos)
 ---
 
 ### Tú también puedes hacer tu propio mapa de méxico (feo):
-<div id="observablehq-map-b1b04503" align="center"></div>
+<div id="observablehq-map-b1b04503" align="center" style="width: 100%;></div>
 <div id="observablehq-viewof-fillWeight-b1b04503"></div>
 <div id="observablehq-viewof-hachureGap-b1b04503"></div>
 <div id="observablehq-viewof-bowing-b1b04503"></div>
