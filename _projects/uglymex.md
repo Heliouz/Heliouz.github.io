@@ -8,7 +8,7 @@ description: Generador de mapas de méxico (pero feos)
 
 
 
-<div id="observablehq-map-b7b285ad" align="center" style="width: 100%; margin: 0 auto;"></div>
+<div id="observablehq-map-b7b285ad" align="center" style="width: 100%; margin: 0 auto; box-sizing: border-box;"></div>
 
 Muevele aquí, muevele allá.
 
