@@ -11,13 +11,13 @@ const Writer = new GlitchedWriter('#glitch_this', { letterize: true });
   await wait(400);
   await Writer.write("capas");
   
-  await wait(500);
+  await wait(400);
   await Writer.write("mapas");
   
-  await wait(500);
+  await wait(400);
   await Writer.write("datos");
   
-   await wait(500);
+   await wait(400);
   await Writer.write("geografías");
   
   await wait(600);
