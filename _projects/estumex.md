@@ -43,7 +43,7 @@ description: Estudios artísticos de la geografía mexicana
 
 -->
 
-<img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="100%" style="display: block;"/>
+<img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="100%" style="display: block;  padding:0; margin:0;"/>
 
 
 
