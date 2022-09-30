@@ -27,11 +27,12 @@ description: Estudios artísticos de la geografía mexicana
 
 
 <script type="text/javascript" src="/assets/js/ascii.js"></script>
+
+<!-- JOY DIVISION NOISEP5.JS
 <div style="text-align: center">
   <canvas id="canvas" style="width:100%; padding: 0"></canvas>
 </div>
 
-<!-- JOY DIVISION NOISEP5.JS
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script type="text/javascript" src="/assets/js/noisep5.js"></script>
 <script type="text/javascript" src="/assets/js/unkpls.js"></script>
@@ -40,7 +41,7 @@ description: Estudios artísticos de la geografía mexicana
 <img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="100%"/>
 
 <div style="text-align: center">
-  <canvas id="canvas" style="width:100%; padding: 0"></canvas>
+  <canvas id="canvas" style="width:100%; padding: 0; display: block;"></canvas>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
