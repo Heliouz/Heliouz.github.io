@@ -28,7 +28,7 @@ description: Estudios artísticos de la geografía mexicana
 
 <script type="text/javascript" src="/assets/js/ascii.js"></script>
 
-<div style="background-image:"/assets/images/mapatopo/ridge_mex.png"; width: 100%;">
+<div style="background-image:url(/assets/images/mapatopo/ridge_mex.png); width: 100%;">
 </div>
 
 
