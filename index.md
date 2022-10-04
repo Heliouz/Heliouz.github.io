@@ -7,7 +7,7 @@ profile:
 published: true
 ---
   
-<script type="text/javascript" src="/assets/js/nbr.js"></script>  
+<script type="module" src="/assets/js/nbr.js"></script>  
   
 Ingeniero mecánico y maestro en ciencia e ingeniería de materiales por la UNAM. Mi especialidad son los materiales metálicos y me dedico a estudiar aceros avanzados. Actualmente estoy investigando sobre aceros de temple y particionado en la UPC, en Barcelona.
 
