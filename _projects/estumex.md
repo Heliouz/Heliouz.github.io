@@ -15,7 +15,7 @@ description: Algunos mapas que he hecho.
 
 <div style="text-align: center">  
 <pre id="target" style="width:100%;
-                        font-family: Consolas,Courier,monospace; font-size:10px;
+                        font-family: Consolas,Courier,monospace; font-size:10px; color: #0D3251;
                         line-height:0.5;
                         letter-spacing: 0em;
                         border: 0;
