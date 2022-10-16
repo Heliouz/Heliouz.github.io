@@ -31,7 +31,7 @@ Con solo dibujar los ríos de méxico es suficiente para comprender la geografí
 <img src="/assets/images/mapatopo/maprios.jpg" alt="mapamex" width="98%" style="display: block;  padding:0; margin:0;"/>
 ### Mis favoritos
 <p float="center">
-  <img src="/assets/images/mapatopo/maprio1.jpg" width="33%" />
-  <img src="/assets/images/mapatopo/maprio2.jpg" width="33%" /> 
-  <img src="/assets/images/mapatopo/maprio3.jpg" width="33%" />
+  <img src="/assets/images/mapatopo/maprio1.jpg" width="32%" />
+  <img src="/assets/images/mapatopo/maprio2.jpg" width="32%" /> 
+  <img src="/assets/images/mapatopo/maprio3.jpg" width="32%" />
 </p>
