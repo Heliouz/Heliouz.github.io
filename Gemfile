@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-email-protect'
   gem 'jekyll-target-blank'
+  gem 'jemoji'
 end
 
 gem "webrick", "~> 1.7"
