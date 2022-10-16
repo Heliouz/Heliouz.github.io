@@ -17,7 +17,7 @@ published: true
 
 
 [¿Por qué se encoge un billete de 20 pesos al calentarse? Científico lo explica](https://www.sdpnoticias.com/estilo-de-vida/por-que-se-encoge-un-billete-de-20-pesos-al-calentarse-cientifico-lo-explica/){:target="_blank"}  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _SDP Noticias (sin mi autorización)_, 2021
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _SDP Noticias (sin mi autorización :angry: )_, 2021
 
 <br>
 
