@@ -29,7 +29,7 @@ description: Algunos mapas que he hecho.
 ## Mapa topográfico
 <img src="/assets/images/mapatopo/ridge_mex.png" alt="mapamex" width="98%" style="display: block;  padding:0; margin:0;"/>
 
-Los datos de la elevación son del [Shuttle Radar Topography Mission (SRTM) de la NASA] (https://www2.jpl.nasa.gov/srtm/){:target="_blank"}.
+Los datos de la elevación son del [Shuttle Radar Topography Mission (SRTM) de la NASA](https://www2.jpl.nasa.gov/srtm/){:target="_blank"}.
 
 ## Ríos de México
 Con solo dibujar los ríos de méxico es suficiente para comprender la geografía del país. And I think that's beautiful. 
