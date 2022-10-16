@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ugly Mexico Map Gen
+title: Mexi generador de mapas feos
 description: Generador de mapas de méxico (pero feos)
 ---
 
