@@ -40,5 +40,5 @@ Con solo dibujar los ríos de méxico es suficiente para comprender la geografí
   <img src="/assets/images/mapatopo/maprio2.jpg" width="32%" /> 
   <img src="/assets/images/mapatopo/maprio3.jpg" width="32%" />
 </p>
-
+Los datos de los ríos son de [HydroSHEDS]([https://www2.jpl.nasa.gov/srtm/](https://www.hydrosheds.org/products/hydrorivers)){:target="_blank"}
 Hechos con python, javascript y cariño.
