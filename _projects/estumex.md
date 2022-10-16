@@ -4,11 +4,14 @@ title: Mapas de México
 description: Algunos mapas que he hecho.
 ---
 
+<!╌
 <script type="module" src="/assets/js/glitch.js"></script>
 <h4>
 <div class="text" id="glitch_this">&nbsp;&nbsp;&nbsp;&nbsp;Geografías</div>
 </h4>
+╌>
 
+### ASCII Méx
 
 <div style="text-align: center">  
 <pre id="target" style="width:100%;
