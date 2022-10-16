@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Joy div
-description: with no page entry here
+title: Solo una animación
+description: Solo una animación en JS como de Joy Division
 ---
 
 <div style="text-align: center">
