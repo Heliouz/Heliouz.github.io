@@ -32,7 +32,7 @@ Los datos de la elevación son del [Shuttle Radar Topography Mission (SRTM) de l
 
 
 ## Ríos de México
-Con solo dibujar los ríos de méxico es suficiente para comprender la geografía del país. And I think that's beautiful. Los datos de los ríos son de [HydroSHEDS]([https://www2.jpl.nasa.gov/srtm/](https://www.hydrosheds.org/products/hydrorivers)){:target="_blank"}
+Con solo dibujar los ríos de méxico es suficiente para comprender la geografía del país. And I think that's beautiful. Los datos de los ríos son de [HydroSHEDS]([https://www2.jpl.nasa.gov/srtm/](https://www.hydrosheds.org/products/hydrorivers)){:target="_blank"}.
 <img src="/assets/images/mapatopo/maprios.jpg" alt="mapamex" width="98%" style="display: block;  padding:0; margin:0;"/>
 ### Mis favoritos
 <p float="center">
