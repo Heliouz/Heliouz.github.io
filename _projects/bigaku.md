@@ -15,7 +15,7 @@ Bigaku es un que bot busca y tuitea imágenes que considera estéticas sobre ani
 >Japonés: 美学 (Bigaku)  
 >Español: Estética
 
-Bigaku fue programado en Python y ha estado publicando imágenes sin parar desde abril del 2020. [Aquí puedes verlo en acción](https://twitter.com/BigakuSan)
+Bigaku fue programado en Python y ha estado publicando imágenes sin parar desde abril del 2020. [Aquí puedes verlo en acción](https://twitter.com/BigakuSan).
 
 #### ¿Cómo un bot puede tener sentido estético?
 Aunque me gusta pensar que tiene un sentido de la estética, sé que no es así. 
