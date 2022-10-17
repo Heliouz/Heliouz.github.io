@@ -21,8 +21,7 @@ published: true
 
 <br>
 
-Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS.  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, 2019. 
+Tesis de licenciatura sobre microestructura y comportamiento termoelástico en aleaciones de aluminio procesadas por RCS. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, 2019. 
 
 
 <br>
