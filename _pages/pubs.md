@@ -21,7 +21,7 @@ published: true
 
 <br>
 
-Tesis de licenciatura sobre microestructura y comportamiento termoelástico en aleaciones de aluminio procesadas por RCS. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, 2019. 
+Tesis de licenciatura sobre microestructura y comportamiento termoelástico en aleación de aluminio procesada por RCS. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, 2019. 
 
 
 <br>
