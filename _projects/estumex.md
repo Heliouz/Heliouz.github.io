@@ -11,6 +11,9 @@ description: Algunos mapas que he hecho.
 </h4>
 -->
 
+Compilación de algunos mapas de México que he hecho y me han gustado. 
+Hechos con python, javascript y cariño.
+
 ## ASCII Méx
 
 <div style="text-align: center">  
@@ -40,5 +43,3 @@ Con solo dibujar los ríos de méxico es suficiente para comprender la geografí
   <img src="/assets/images/mapatopo/maprio2.jpg" width="32%" /> 
   <img src="/assets/images/mapatopo/maprio3.jpg" width="32%" />
 </p>
-
-Hechos con python, javascript y cariño.
