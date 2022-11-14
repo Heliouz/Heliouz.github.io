@@ -1,14 +1,17 @@
 ---
 layout: post
-title: Mexi generador de mapas feos
+title: ¿cuándo un mapa deja de serlo?
 description: Generador de mapas de méxico (pero feos)
 ---
 
-#### ¿En qué momento un mapa deja de ser un mapa?, ¿en qué momento méxico que deja de ser méxico?
+###### ¿En qué momento un mapa deja de ser un mapa?, ¿en qué momento méxico que deja de ser méxico?
 
-#### ¿Existe ese momento?
 
-#### No sé, tú dime: 
+###### ¿Existe ese momento?
+
+
+
+###### No sé, tú dime: 
 
 
 
