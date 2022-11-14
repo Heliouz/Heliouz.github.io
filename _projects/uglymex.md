@@ -7,9 +7,6 @@ description: Generador de mapas de méxico (pero feos)
 ##### ¿En qué momento un mapa deja de ser un mapa?, ¿en qué momento méxico que deja de ser méxico?
 
 
-##### ¿Existe ese momento?
-
-
 
 ##### No sé, tú dime: 
 
