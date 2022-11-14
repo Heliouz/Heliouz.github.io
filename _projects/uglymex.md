@@ -4,13 +4,16 @@ title: Mexi generador de mapas feos
 description: Generador de mapas de méxico (pero feos)
 ---
 
-### Tú también puedes hacer tu propio mapa de méxico (feo): 
+#### ¿En qué momento un mapa deja de ser un mapa?, ¿en qué momento méxico que deja de ser méxico?
+
+#### ¿Existe ese momento?
+
+#### No sé, tú dime: 
 
 
 
 <div id="observablehq-map-b7b285ad" align="center" style="width: auto; margin: 0 auto; box-sizing: border-box;"></div>
 
-Muevele aquí, muevele allá.
 <div id="observablehq-viewof-roughness-b7b285ad"></div>
 <div id="observablehq-viewof-fillWeight-b7b285ad"></div>
 <div id="observablehq-viewof-hachureGap-b7b285ad"></div>
