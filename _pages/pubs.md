@@ -13,7 +13,7 @@ published: true
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _El Reforma_, **Abril 2024**
 
 
-- [¿El café latte es más investiable en CDMX que en el resto del mundo?](https://www.animalgourmet.com/2023/06/29/cafe-latte-dura-menos-tiempo-en-cdmx/){:target="_blank"}  
+- [¿El café latte es más inestable en CDMX que en el resto del mundo?](https://www.animalgourmet.com/2023/06/29/cafe-latte-dura-menos-tiempo-en-cdmx/){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Animal Gourmet_, **Junio 2023**
 
 
