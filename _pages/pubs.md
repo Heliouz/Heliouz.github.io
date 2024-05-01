@@ -12,17 +12,13 @@ published: true
 - [Alertan por 'basura' electoral en calles](https://www.reforma.com/alertan-por-basura-electoral-en-calles/ar2791241){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _El Reforma_, **Abril 2024**
 
-
 - [¿El café latte es más inestable en CDMX que en el resto del mundo?](https://www.animalgourmet.com/2023/06/29/cafe-latte-dura-menos-tiempo-en-cdmx/){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Animal Gourmet_, **Junio 2023**
 
+- Diseño de tratamiento térmico de temple y particionado para desarrollo de aceros avanzados de alta resistencia (AHSS). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **Junio 2023**. 
 
 - [Crean mapa de cafeterías fuera de la Roma y la Condesa](https://www.eluniversal.com.mx/menu/crean-mapa-de-cafeterias-fuera-de-la-roma-y-la-condesa-con-recomendaciones-de-twitter/){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _El universal_, **Mayo 2023**
-
-
-- Diseño de tratamiento térmico de temple y particionado para desarrollo de aceros avanzados de alta resistencia (AHSS). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **Junio 2023**. 
-
 
 - [Breve historia del temple: de las espadas a los automóviles modernos](https://upcommons.upc.edu/handle/2117/375173){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Materiales Avanzados_, UNAM, **Septiembre 2022**
