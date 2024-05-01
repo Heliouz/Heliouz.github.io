@@ -21,7 +21,7 @@ published: true
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _El universal_, **Mayo 2023**
 
 
-- Diseño de tratamiento térmico de temple y particionado para desarrollo de aceros avanzados de alta resistencia (AHSS). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **2023**. 
+- Diseño de tratamiento térmico de temple y particionado para desarrollo de aceros avanzados de alta resistencia (AHSS). <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **Junio 2023**. 
 
 
 - [Breve historia del temple: de las espadas a los automóviles modernos](https://upcommons.upc.edu/handle/2117/375173){:target="_blank"}  
@@ -32,5 +32,5 @@ published: true
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _SDP Noticias_, **Octubre 2021**
 
 
-- Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **2019**. 
+- Efecto de la microestructura sobre el comportamiento termoelástico de la aleación Al 1100 procesada por RCS. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Tesis UNAM_, **Octubre 2019**. 
 
