@@ -12,7 +12,6 @@ published: true
 [Alertan por 'basura' electoral en calles](https://www.reforma.com/alertan-por-basura-electoral-en-calles/ar2791241){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _El Reforma_, Abril 2024
 
-<br>
 
 [¿El café latte es más investiable en CDMX que en el resto del mundo?](https://www.animalgourmet.com/2023/06/29/cafe-latte-dura-menos-tiempo-en-cdmx/){:target="_blank"}  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Publicado en _Animal Gourmet_, Junio 2023
