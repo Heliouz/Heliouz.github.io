@@ -8,10 +8,10 @@ description: Generador de atractores de Peter de Jong
 
 <!--  -->
 <div>
-  <label>a: <input type="number" id="a" step="0.01" value="1.4" style="width: 60px;"></label>
-  <label>b: <input type="number" id="b" step="0.01" value="-2.3" style="width: 60px;"></label>
-  <label>c: <input type="number" id="c" step="0.01" value="2.4" style="width: 60px;"></label>
-  <label>d: <input type="number" id="d" step="0.01" value="-2.1" style="width: 60px;"></label>
+  <label>a: <input type="number" id="a" step="0.01" value="1.4" min="-10" max="10" style="width: 40px;"></label>
+  <label>b: <input type="number" id="b" step="0.01" value="-2.3" min="-10" max="10" style="width: 40px;"></label>
+  <label>c: <input type="number" id="c" step="0.01" value="2.4" min="-10" max="10" style="width: 40px;"></label>
+  <label>d: <input type="number" id="d" step="0.01" value="-2.1" min="-10" max="10" style="width: 40px;"></label>
   <button onclick="draw()">Generar</button>
 </div>
 <div id="warning" style="color: red; font-weight: bold; margin-top: 10px; display: none;">
