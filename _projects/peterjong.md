@@ -71,15 +71,6 @@ description: Generador de atractores de Peter de Jong
     
   </div>
   
-  <!-- Generate Button -->
-  <button onclick="draw()" 
-          style="width: 100%; padding: 8px; background: linear-gradient(135deg, #708090 0%, #556b70 100%); 
-                 color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: bold; 
-                 cursor: pointer; box-shadow: 0 2px 6px rgba(85, 107, 112, 0.3); 
-                 transition: all 0.3s ease; touch-action: manipulation;">
-    Generar Atractor
-  </button>
-  
 </div>
 
 <div id="warning" style="color: red; font-weight: bold; margin-top: 10px; display: none;">
@@ -133,17 +124,6 @@ description: Generador de atractores de Peter de Jong
     border-color: #708090;
     box-shadow: 0 0 0 2px rgba(112, 128, 144, 0.2);
     outline: none;
-  }
-  
-  /* Button hover effect */
-  button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(85, 107, 112, 0.4) !important;
-  }
-  
-  button:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 3px rgba(85, 107, 112, 0.3) !important;
   }
   
   /* Responsive adjustments for very small screens */
@@ -252,12 +232,14 @@ description: Generador de atractores de Peter de Jong
       value = Math.max(-8, Math.min(8, value));
       slider.value = value;
       updateSliderBackground(param, value);
+      draw(); // Automatically redraw when input changes
     });
     
     slider.addEventListener('input', function() {
       const value = parseFloat(this.value);
       input.value = value.toFixed(3);
       updateSliderBackground(param, value);
+      draw(); // Automatically redraw when slider changes
     });
   }
   
