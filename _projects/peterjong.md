@@ -5,77 +5,77 @@ description: Generador de atractores de Peter de Jong
 ---
 ##### Genera tu propio atractor
 
-<div style="padding: 15px; max-width: 100%; box-sizing: border-box;">
+<div style="padding: 10px; max-width: 100%; box-sizing: border-box;">
   <!-- Parameter Controls -->
-  <div style="display: grid; gap: 20px; margin-bottom: 20px;">
+  <div style="display: grid; gap: 12px; margin-bottom: 15px;">
     
     <!-- Parameter A -->
-    <div style="background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <label style="font-weight: bold; font-size: 16px; color: #333;">a:</label>
-        <input type="number" id="a" step="0.01" value="1.4" min="-10" max="10" inputmode="decimal" 
-               style="width: 80px; padding: 8px 12px; border: 2px solid #ddd; border-radius: 8px; 
-                      font-size: 16px; text-align: center; background: white; 
+    <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <label style="font-weight: bold; font-size: 14px; color: #333;">a:</label>
+        <input type="number" id="a" step="0.001" value="1.400" min="-8" max="8" inputmode="decimal" 
+               style="width: 70px; padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; 
+                      font-size: 13px; text-align: center; background: white; 
                       -webkit-appearance: none; appearance: none;">
       </div>
-      <input type="range" id="slider-a" min="-10" max="10" step="0.01" value="1.4" 
-             style="width: 100%; height: 44px; -webkit-appearance: none; appearance: none; 
-                    background: linear-gradient(to right, #e0e0e0 0%, #4CAF50 57%, #e0e0e0 100%); 
-                    border-radius: 22px; outline: none; cursor: pointer;">
+      <input type="range" id="slider-a" min="-8" max="8" step="0.001" value="1.400" 
+             style="width: 100%; height: 20px; -webkit-appearance: none; appearance: none; 
+                    background: linear-gradient(to right, #e8e8e8 0%, #8db4a0 58.75%, #e8e8e8 100%); 
+                    border-radius: 10px; outline: none; cursor: pointer;">
     </div>
     
     <!-- Parameter B -->
-    <div style="background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <label style="font-weight: bold; font-size: 16px; color: #333;">b:</label>
-        <input type="number" id="b" step="0.01" value="-2.3" min="-10" max="10" inputmode="decimal" 
-               style="width: 80px; padding: 8px 12px; border: 2px solid #ddd; border-radius: 8px; 
-                      font-size: 16px; text-align: center; background: white; 
+    <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <label style="font-weight: bold; font-size: 14px; color: #333;">b:</label>
+        <input type="number" id="b" step="0.001" value="-2.300" min="-8" max="8" inputmode="decimal" 
+               style="width: 70px; padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; 
+                      font-size: 13px; text-align: center; background: white; 
                       -webkit-appearance: none; appearance: none;">
       </div>
-      <input type="range" id="slider-b" min="-10" max="10" step="0.01" value="-2.3" 
-             style="width: 100%; height: 44px; -webkit-appearance: none; appearance: none; 
-                    background: linear-gradient(to right, #e0e0e0 0%, #2196F3 38.5%, #e0e0e0 100%); 
-                    border-radius: 22px; outline: none; cursor: pointer;">
+      <input type="range" id="slider-b" min="-8" max="8" step="0.001" value="-2.300" 
+             style="width: 100%; height: 20px; -webkit-appearance: none; appearance: none; 
+                    background: linear-gradient(to right, #e8e8e8 0%, #7a9bb8 35.625%, #e8e8e8 100%); 
+                    border-radius: 10px; outline: none; cursor: pointer;">
     </div>
     
     <!-- Parameter C -->
-    <div style="background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <label style="font-weight: bold; font-size: 16px; color: #333;">c:</label>
-        <input type="number" id="c" step="0.01" value="2.4" min="-10" max="10" inputmode="decimal" 
-               style="width: 80px; padding: 8px 12px; border: 2px solid #ddd; border-radius: 8px; 
-                      font-size: 16px; text-align: center; background: white; 
+    <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <label style="font-weight: bold; font-size: 14px; color: #333;">c:</label>
+        <input type="number" id="c" step="0.001" value="2.400" min="-8" max="8" inputmode="decimal" 
+               style="width: 70px; padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; 
+                      font-size: 13px; text-align: center; background: white; 
                       -webkit-appearance: none; appearance: none;">
       </div>
-      <input type="range" id="slider-c" min="-10" max="10" step="0.01" value="2.4" 
-             style="width: 100%; height: 44px; -webkit-appearance: none; appearance: none; 
-                    background: linear-gradient(to right, #e0e0e0 0%, #FF9800 62%, #e0e0e0 100%); 
-                    border-radius: 22px; outline: none; cursor: pointer;">
+      <input type="range" id="slider-c" min="-8" max="8" step="0.001" value="2.400" 
+             style="width: 100%; height: 20px; -webkit-appearance: none; appearance: none; 
+                    background: linear-gradient(to right, #e8e8e8 0%, #b8956f 65%, #e8e8e8 100%); 
+                    border-radius: 10px; outline: none; cursor: pointer;">
     </div>
     
     <!-- Parameter D -->
-    <div style="background: #f9f9f9; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <label style="font-weight: bold; font-size: 16px; color: #333;">d:</label>
-        <input type="number" id="d" step="0.01" value="-2.1" min="-10" max="10" inputmode="decimal" 
-               style="width: 80px; padding: 8px 12px; border: 2px solid #ddd; border-radius: 8px; 
-                      font-size: 16px; text-align: center; background: white; 
+    <div style="background: #f9f9f9; padding: 10px; border-radius: 8px; border: 1px solid #e0e0e0;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <label style="font-weight: bold; font-size: 14px; color: #333;">d:</label>
+        <input type="number" id="d" step="0.001" value="-2.100" min="-8" max="8" inputmode="decimal" 
+               style="width: 70px; padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px; 
+                      font-size: 13px; text-align: center; background: white; 
                       -webkit-appearance: none; appearance: none;">
       </div>
-      <input type="range" id="slider-d" min="-10" max="10" step="0.01" value="-2.1" 
-             style="width: 100%; height: 44px; -webkit-appearance: none; appearance: none; 
-                    background: linear-gradient(to right, #e0e0e0 0%, #9C27B0 39.5%, #e0e0e0 100%); 
-                    border-radius: 22px; outline: none; cursor: pointer;">
+      <input type="range" id="slider-d" min="-8" max="8" step="0.001" value="-2.100" 
+             style="width: 100%; height: 20px; -webkit-appearance: none; appearance: none; 
+                    background: linear-gradient(to right, #e8e8e8 0%, #9a8aa3 36.875%, #e8e8e8 100%); 
+                    border-radius: 10px; outline: none; cursor: pointer;">
     </div>
     
   </div>
   
   <!-- Generate Button -->
   <button onclick="draw()" 
-          style="width: 100%; padding: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-                 color: white; border: none; border-radius: 12px; font-size: 18px; font-weight: bold; 
-                 cursor: pointer; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); 
+          style="width: 100%; padding: 8px; background: linear-gradient(135deg, #708090 0%, #556b70 100%); 
+                 color: white; border: none; border-radius: 6px; font-size: 14px; font-weight: bold; 
+                 cursor: pointer; box-shadow: 0 2px 6px rgba(85, 107, 112, 0.3); 
                  transition: all 0.3s ease; touch-action: manipulation;">
     Generar Atractor
   </button>
@@ -86,79 +86,79 @@ description: Generador de atractores de Peter de Jong
   Los parámetros no son válidos.
 </div>
 
-<canvas id="canvas" style="background-color:#f8f8f8; margin-top: 20px; width: 100%; height: auto; max-width: 800px;"></canvas>
+<canvas id="canvas" style="background-color:#f8f8f8; margin-top: 15px; width: 100%; height: auto; max-width: 800px;"></canvas>
 
 <style>
   /* Custom slider thumb styles for better mobile experience */
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
     background: white;
-    border: 3px solid #333;
+    border: 2px solid #555;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
   }
   
   input[type="range"]::-webkit-slider-thumb:active {
-    transform: scale(1.2);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   }
   
   input[type="range"]::-moz-range-thumb {
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
     background: white;
-    border: 3px solid #333;
+    border: 2px solid #555;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     transition: all 0.2s ease;
   }
   
   input[type="range"]::-moz-range-thumb:active {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   
   /* Input number styling for iOS */
   input[type="number"] {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
   }
   
   input[type="number"]:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    border-color: #708090;
+    box-shadow: 0 0 0 2px rgba(112, 128, 144, 0.2);
     outline: none;
   }
   
   /* Button hover effect */
   button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(85, 107, 112, 0.4) !important;
   }
   
   button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3) !important;
+    box-shadow: 0 1px 3px rgba(85, 107, 112, 0.3) !important;
   }
   
   /* Responsive adjustments for very small screens */
   @media (max-width: 320px) {
-    div[style*="padding: 15px"] {
-      padding: 10px !important;
+    div[style*="padding: 10px"] {
+      padding: 8px !important;
     }
     
-    div[style*="gap: 20px"] {
-      gap: 15px !important;
+    div[style*="gap: 12px"] {
+      gap: 10px !important;
     }
     
     input[type="number"] {
-      width: 70px !important;
-      font-size: 14px !important;
+      width: 65px !important;
+      font-size: 12px !important;
     }
   }
 </style>
@@ -249,14 +249,14 @@ description: Generador de atractores de Peter de Jong
     input.addEventListener('input', function() {
       let value = parseFloat(this.value);
       if (isNaN(value)) value = 0;
-      value = Math.max(-10, Math.min(10, value));
+      value = Math.max(-8, Math.min(8, value));
       slider.value = value;
       updateSliderBackground(param, value);
     });
     
     slider.addEventListener('input', function() {
       const value = parseFloat(this.value);
-      input.value = value;
+      input.value = value.toFixed(3);
       updateSliderBackground(param, value);
     });
   }
@@ -264,17 +264,17 @@ description: Generador de atractores de Peter de Jong
   // Update slider background to show current position
   function updateSliderBackground(param, value) {
     const slider = document.getElementById('slider-' + param);
-    const percentage = ((value + 10) / 20) * 100;
+    const percentage = ((value + 8) / 16) * 100;
     
     const colors = {
-      'a': '#4CAF50',
-      'b': '#2196F3', 
-      'c': '#FF9800',
-      'd': '#9C27B0'
+      'a': '#8db4a0',
+      'b': '#7a9bb8', 
+      'c': '#b8956f',
+      'd': '#9a8aa3'
     };
     
     const color = colors[param];
-    slider.style.background = `linear-gradient(to right, #e0e0e0 0%, ${color} ${percentage}%, #e0e0e0 100%)`;
+    slider.style.background = `linear-gradient(to right, #e8e8e8 0%, ${color} ${percentage}%, #e8e8e8 100%)`;
   }
   
   // Initialize synchronization for all parameters
