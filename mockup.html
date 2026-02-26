@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>helios ocaña</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f0ede8;
+      --text:    #1a1714;
+      --mid:     #8a847c;
+      --rule:    #d8d3cc;
+      --surface: #e8e4dd;
+      --accent:  #b85030;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .demo-bar {
+      background: var(--text); color: var(--mid);
+      font-size: 9px; letter-spacing: 0.12em;
+      text-transform: uppercase; text-align: center; padding: 0.38rem;
+    }
+
+    /* ══ HEADER ══ */
+    header {
+      max-width: 1100px; margin: 0 auto;
+      padding: 1.6rem 2.5rem 0;
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .h-id { display: flex; flex-direction: column; gap: 0.1rem; }
+    .h-name { font-family: 'EB Garamond', serif; font-size: 1.05rem; color: var(--text); text-decoration: none; cursor: pointer; }
+    .h-sub  { font-size: 9.5px; color: var(--mid); letter-spacing: 0.06em; }
+    .lang-pill {
+      display: inline-flex; margin-top: 0.5rem;
+      border: 1px solid var(--rule); border-radius: 1px; overflow: hidden;
+    }
+    .lang-pill span {
+      font-size: 8px; letter-spacing: 0; text-transform: uppercase;
+      flex: 0 0 24px;
+      text-align: center; line-height: 1;
+      padding: 4px 0;
+      color: var(--mid); cursor: pointer; transition: all 0.15s;
+      box-sizing: border-box;
+    }
+    .lang-pill span:first-child { border-right: 1px solid var(--rule); }
+    .lang-pill span.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+    .lang-pill span:hover:not(.on) { color: var(--text); }
+
+    .h-nav { display: flex; flex-direction: column; align-items: flex-end; }
+    .h-nav a {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      line-height: 1.05; color: var(--mid);
+      text-decoration: none; letter-spacing: -0.01em;
+      transition: color 0.2s; cursor: pointer;
+    }
+    .h-nav a:hover, .h-nav a.active { color: var(--text); }
+
+    /* ══ HERO ══ */
+    .hero {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 2.5rem 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 4rem;
+    }
+    .hero-left  { display: flex; flex-direction: column; justify-content: flex-end; gap: 0.35rem; }
+    .hero-handle {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(3.5rem, 7.5vw, 6.5rem);
+      color: var(--text); letter-spacing: -0.03em; line-height: 0.95; display: block;
+    }
+    .hero-tagline {
+      font-family: 'EB Garamond', serif; font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.2rem); line-height: 1.2; color: var(--mid);
+    }
+    .hero-right {
+      flex-shrink: 0; display: flex; flex-direction: column;
+      align-items: flex-end; justify-content: flex-end; padding-bottom: 0.2rem;
+    }
+    .hero-credential { font-size: 10px; color: var(--mid); letter-spacing: 0.06em; text-align: right; line-height: 1.9; }
+    .hero-credential .hl { color: var(--text); opacity: 0.75; }
+
+    /* ══ PAGES ══ */
+    .page-view { display: none; }
+    .page-view.active { display: block; }
+    .content { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+
+    .slabel {
+      font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--mid); padding-bottom: 0.75rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+
+    /* ══════════════════════════════════
+       HOME — DIAGRAM AS FULL-BLEED BG
+    ══════════════════════════════════ */
+    .home-outer {
+      position: relative;
+      border-bottom: 1px solid var(--rule);
+      overflow: hidden;
+    }
+
+    /* SVG absolutely positioned, spans full width from left edge */
+    .ttt-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .diagram-caption {
+      position: absolute;
+      bottom: 1.2rem; left: 2.5rem;
+      font-size: 7.5px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--mid); opacity: 0.45;
+      z-index: 2; pointer-events: none;
+    }
+
+    /* content grid sits above SVG */
+    .home-inner {
+      position: relative; z-index: 2;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+    }
+
+    .home-left-spacer { min-height: 480px; }
+
+    .home-info {
+      padding: 2.8rem 0 3.2rem 2.5rem;
+      border-left: 1px solid var(--rule);
+      background: rgba(240, 237, 232, 0.72);
+      display: flex; flex-direction: column; gap: 2.2rem;
+    }
+
+    .bio {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.18rem; line-height: 1.85;
+      color: var(--text); opacity: 0.9;
+    }
+    .bio a {
+      color: var(--text); text-decoration-color: var(--accent);
+      text-decoration-thickness: 1px; text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+    .bio a:hover { color: var(--accent); }
+
+    .facts-grid { display: grid; grid-template-columns: 1fr 1fr; }
+    .fact-cell { padding: 0.75rem 0; border-top: 1px solid var(--rule); }
+    .fact-cell:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
+    .fact-cell:nth-child(odd)  { padding-right: 1rem; border-right: 1px solid var(--rule); }
+    .fact-cell:nth-child(even) { padding-left: 1rem; }
+    .fact-k { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.2rem; }
+    .fact-v { font-family: 'EB Garamond', serif; font-size: 1.08rem; color: var(--text); opacity: 0.85; line-height: 1.3; }
+    .fact-v a { color: var(--text); text-decoration-color: var(--rule); text-underline-offset: 3px; transition: text-decoration-color 0.15s; }
+    .fact-v a:hover { text-decoration-color: var(--accent); }
+
+    /* ══ PROJECTS ══ */
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin-top: 2.5rem; border: 1px solid var(--rule); }
+    .proj-card { background: var(--bg); padding: 2rem 2rem 1.8rem; display: flex; flex-direction: column; transition: background 0.15s; cursor: pointer; user-select: none; }
+    .proj-card:hover { background: var(--surface); }
+    .proj-card:hover .proj-arrow { color: var(--accent); transform: translateX(3px); }
+    .proj-card:hover .proj-title { color: var(--accent); }
+    .proj-meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.4rem; }
+    .proj-type { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); }
+    .proj-year { font-size: 8px; letter-spacing: 0.08em; color: var(--mid); }
+    .proj-title { font-family: 'EB Garamond', serif; font-size: clamp(1.6rem,2.4vw,2.1rem); line-height: 1.05; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.9rem; transition: color 0.15s; }
+    .proj-desc { font-size: 10.5px; color: var(--mid); line-height: 1.6; flex: 1; }
+    .proj-arrow { margin-top: 1.8rem; font-size: 10px; color: var(--rule); transition: color 0.2s, transform 0.2s; display: inline-block; }
+    .proj-card.wide { grid-column: span 2; flex-direction: row; align-items: flex-start; gap: 3rem; }
+    .proj-card.wide .proj-body { flex: 1; }
+    .proj-card.wide .proj-side { flex-shrink: 0; width: 200px; padding-top: 0.2rem; }
+    .proj-card.wide .proj-title { font-size: clamp(1.8rem,2.8vw,2.5rem); margin-bottom: 0.6rem; }
+
+    /* ══ MODAL ══ */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(26,23,20,0.55); z-index: 500; align-items: flex-end; justify-content: center; backdrop-filter: blur(3px); }
+    .modal-overlay.open { display: flex; animation: overlayIn 0.25s ease forwards; }
+    @keyframes overlayIn { from{opacity:0}to{opacity:1} }
+    .modal { background: var(--bg); width: 100%; max-width: 760px; max-height: 88vh; overflow-y: auto; border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); border-radius: 2px 2px 0 0; animation: sheetUp 0.3s cubic-bezier(0.22,1,0.36,1) forwards; margin: 0 2.5rem; }
+    @keyframes sheetUp { from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1} }
+    .modal-header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--rule); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
+    .modal-meta { display: flex; gap: 1.2rem; align-items: baseline; }
+    .modal-type { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mid); }
+    .modal-year { font-size: 8px; color: var(--mid); letter-spacing: 0.06em; }
+    .modal-close { background: none; border: none; cursor: pointer; font-size: 14px; color: var(--mid); padding: 0.2rem 0.4rem; transition: color 0.15s; font-family: 'IBM Plex Mono', monospace; }
+    .modal-close:hover { color: var(--text); }
+    .modal-body { padding: 2rem 1.8rem 2.5rem; }
+    .modal-title { font-family: 'EB Garamond', serif; font-size: clamp(2rem,4vw,3rem); line-height: 1.0; letter-spacing: -0.02em; color: var(--text); margin-bottom: 1.5rem; }
+    .modal-desc { font-family: 'EB Garamond', serif; font-size: 1.1rem; line-height: 1.8; color: var(--text); opacity: 0.8; margin-bottom: 1.8rem; }
+    .modal-section-label { font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mid); margin: 1.8rem 0 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule); }
+    .modal-detail { font-size: 11px; color: var(--mid); line-height: 1.8; }
+    .modal-image-placeholder { background: var(--surface); border: 1px solid var(--rule); height: 180px; display: flex; align-items: center; justify-content: center; margin: 1.4rem 0; }
+    .modal-image-placeholder span { font-size: 8.5px; letter-spacing: 0.1em; color: var(--mid); text-transform: uppercase; }
+    .modal-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.65rem 1.2rem; border: 1px solid var(--text); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); text-decoration: none; transition: background 0.15s, color 0.15s; }
+    .modal-link:hover { background: var(--text); color: var(--bg); }
+    .modal-link.disabled { border-color: var(--rule); color: var(--mid); cursor: default; pointer-events: none; }
+    .modal-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .modal-tag { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--rule); color: var(--mid); border-radius: 1px; }
+
+    /* ══ PUBS ══ */
+    .pub-list { margin-top: 2.5rem; display: flex; flex-direction: column; }
+    .pub { display: grid; grid-template-columns: 38px 1fr; gap: 1.8rem; padding: 1rem 0; border-top: 1px solid var(--rule); align-items: start; text-decoration: none; color: inherit; transition: background 0.12s; }
+    .pub:last-child { border-bottom: 1px solid var(--rule); }
+    .pub[href]:hover { background: rgba(26,23,20,0.03); margin: 0 -0.5rem; padding-left: 0.5rem; padding-right: 0.5rem; }
+    .pub[href]:hover .pub-title { color: var(--accent); }
+    .pub-yr { font-size: 9px; color: var(--accent); letter-spacing: 0.05em; padding-top: 0.3rem; }
+    .pub-title { font-family: 'EB Garamond', serif; font-size: 1.08rem; color: var(--text); line-height: 1.5; margin-bottom: 0.25rem; opacity: 0.85; transition: color 0.15s; }
+    .pub-meta { font-size: 9.5px; color: var(--mid); font-style: italic; }
+
+    /* ══ CONTACT ══ */
+    .contact-layout { margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+    .contact-note { font-family: 'EB Garamond', serif; font-size: 1.15rem; line-height: 1.8; color: var(--mid); }
+    .cl-list { display: flex; flex-direction: column; }
+    .cl { display: grid; grid-template-columns: 80px 1fr; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; }
+    .cl:last-child { border-bottom: 1px solid var(--rule); }
+    .cl:hover .cl-handle { color: var(--accent); }
+    .cl-platform { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); padding-top: 0.15rem; }
+    .cl-handle { font-family: 'EB Garamond', serif; font-size: 1.05rem; color: var(--text); opacity: 0.75; transition: color 0.15s; }
+
+    /* ══ FOOTER ══ */
+    footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .f-name { font-family: 'EB Garamond', serif; font-size: 0.95rem; color: var(--mid); }
+    .f-copy { font-size: 9px; color: var(--mid); opacity: 0.5; letter-spacing: 0.06em; }
+
+    /* ══ REVEAL ══ */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-group > * { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+    .reveal-group.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:0.00s; }
+    .reveal-group.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:0.07s; }
+    .reveal-group.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:0.14s; }
+    .reveal-group.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:0.21s; }
+    .reveal-group.visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay:0.28s; }
+    .reveal-group.visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay:0.35s; }
+    .reveal-group.visible > *:nth-child(7) { opacity:1; transform:translateY(0); transition-delay:0.42s; }
+  </style>
+</head>
+<body>
+
+  <div class="demo-bar">✦ mockup v16 · helios ocaña ✦</div>
+
+  <header>
+    <div class="h-id">
+      <a class="h-name" onclick="showPage('home')">helios ocaña</a>
+      <span class="h-sub">@heliouz_ · cdmx</span>
+      <div class="lang-pill"><span class="on">es</span><span>en</span></div>
+    </div>
+    <nav class="h-nav">
+      <a class="active" onclick="showPage('home')">inicio</a>
+      <a onclick="showPage('projects')">proyectos</a>
+      <a onclick="showPage('pubs')">publicaciones</a>
+      <a onclick="showPage('contact')">contacto</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-left">
+      <span class="hero-handle">heliouz</span>
+      <p class="hero-tagline">investigo, divulgo y a veces programo.</p>
+    </div>
+    <div class="hero-right">
+      <p class="hero-credential">
+        <span class="hl">ing. mecánico</span> · m.sc. materiales<br>
+        <span class="hl">unam</span> · ciudad de méxico<br>
+        <span class="hl">+1.1m</span> en tiktok · @heliouz_
+      </p>
+    </div>
+  </div>
+
+  <!-- ══════════════ HOME ══════════════ -->
+  <div class="page-view active" id="page-home">
+    <div class="home-outer">
+
+      <!--
+        TTT diagram — design intent:
+        ─────────────────────────────
+        The C-curves open to the RIGHT (correct TTT orientation).
+        Each curve enters from the right at the top, sweeps LEFT
+        to its nose, then turns and sweeps RIGHT again exiting
+        the viewport. Both arms bleed off the right edge.
+
+        The four curves have very different weights — this is the
+        key artistic move. They read like a layered engraving:
+        one gossamer line, one medium, one rule-weight, one bold.
+
+        No Q&P path. No axes. No arrowheads.
+        Only the curves, the Ms/Mf horizontals, and whisper labels.
+      -->
+      <svg class="ttt-bg"
+           viewBox="0 0 1000 490"
+           preserveAspectRatio="xMinYMid meet"
+           xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true"
+           opacity="0.7">
+
+        <!-- ── Ae3 — equilibrium upper critical temp, full bleed ── -->
+        <line x1="0" y1="28" x2="1000" y2="28"
+              stroke="#cdc8c0" stroke-width="0.9" stroke-dasharray="14 6"/>
+        <text x="66" y="23" font-size="7.5" fill="#c8c3bc"
+              letter-spacing="0.1em" font-family="IBM Plex Mono, monospace">Ae₃</text>
+
+        <!-- ── Ae1 — equilibrium lower critical temp, full bleed ── -->
+        <line x1="0" y1="155" x2="1000" y2="155"
+              stroke="#cdc8c0" stroke-width="0.7" stroke-dasharray="14 6"/>
+        <text x="66" y="150" font-size="7.5" fill="#c8c3bc"
+              letter-spacing="0.1em" font-family="IBM Plex Mono, monospace">Ae₁</text>
+
+        <!-- ── Extra inner Ps curve — tighter C, between Ps and Pf ──
+             Adds density to the pearlite nose region.
+             Very thin, 0.9px, sits quietly between the two pearlite curves.
+        -->
+        <path d="
+          M 1000, 18
+          C  710, 26   490, 64   340, 114
+          C  248, 143  208, 163  200, 175
+          C  192, 187  204, 218  245, 252
+          C  295, 293  490, 322  1000, 340
+        "
+        stroke="#c0bab0" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+
+        <!-- ── Extra inner Bs curve — between Bs and Bf ──
+             Adds body to the bainite region.
+             Medium-thin at 1.4px, slightly different nose position.
+        -->
+        <path d="
+          M 1000, 295
+          C  850, 297  720, 304  590, 313
+          C  475, 321  415, 325  385, 327
+          C  355, 329  358, 343  392, 358
+          C  435, 376  620, 393  1000, 402
+        "
+        stroke="#b0aaa2" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <line x1="58" y1="0" x2="58" y2="490"
+              stroke="#c8c3bc" stroke-width="1.2" stroke-linecap="round"/>
+
+        <!-- ── X-AXIS — horizontal rule at bottom, bleeds full width ── -->
+        <line x1="58" y1="490" x2="1000" y2="490"
+              stroke="#c8c3bc" stroke-width="0.8" stroke-linecap="round"/>
+
+        <!-- ── TEMPERATURE GRIDLINES — faint horizontals ──
+             Evenly spaced across the y range, echoing the Ms/Mf dashes
+             but even lighter. They give the background more density.
+        -->
+        <line x1="58" y1="62"  x2="1000" y2="62"  stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+        <line x1="58" y1="125" x2="1000" y2="125" stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+        <line x1="58" y1="190" x2="1000" y2="190" stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+        <line x1="58" y1="255" x2="1000" y2="255" stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+        <line x1="58" y1="320" x2="1000" y2="320" stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+        <line x1="58" y1="385" x2="1000" y2="385" stroke="#dcd8d2" stroke-width="0.5" stroke-dasharray="3 14"/>
+
+        <!-- ── Y-AXIS TICKS + TEMPERATURE LABELS ── -->
+        <line x1="50" y1="62"  x2="58" y2="62"  stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="125" x2="58" y2="125" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="190" x2="58" y2="190" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="255" x2="58" y2="255" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="320" x2="58" y2="320" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="385" x2="58" y2="385" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="445" x2="58" y2="445" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="50" y1="468" x2="58" y2="468" stroke="#c8c3bc" stroke-width="0.6"/>
+
+        <text x="44" y="65"  font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">900</text>
+        <text x="44" y="128" font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">750</text>
+        <text x="44" y="193" font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">600</text>
+        <text x="44" y="258" font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">450</text>
+        <text x="44" y="323" font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">300</text>
+        <text x="44" y="388" font-size="7.5" fill="#c8c3bc" text-anchor="end" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">150</text>
+
+        <!-- ── X-AXIS TICKS + TIME LABELS (log scale) ── -->
+        <line x1="148" y1="490" x2="148" y2="498" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="280" y1="490" x2="280" y2="498" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="430" y1="490" x2="430" y2="498" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="600" y1="490" x2="600" y2="498" stroke="#c8c3bc" stroke-width="0.8"/>
+        <line x1="790" y1="490" x2="790" y2="498" stroke="#c8c3bc" stroke-width="0.8"/>
+
+        <text x="148" y="510" font-size="7.5" fill="#c8c3bc" text-anchor="middle" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">10¹</text>
+        <text x="280" y="510" font-size="7.5" fill="#c8c3bc" text-anchor="middle" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">10²</text>
+        <text x="430" y="510" font-size="7.5" fill="#c8c3bc" text-anchor="middle" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">10³</text>
+        <text x="600" y="510" font-size="7.5" fill="#c8c3bc" text-anchor="middle" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">10⁴</text>
+        <text x="790" y="510" font-size="7.5" fill="#c8c3bc" text-anchor="middle" letter-spacing="0.04em" font-family="IBM Plex Mono, monospace">10⁵</text>
+
+        <!-- ── VERTICAL LOG-TIME GRIDLINES — very faint ── -->
+        <line x1="148" y1="0" x2="148" y2="490" stroke="#e0dbd4" stroke-width="0.4" stroke-dasharray="2 18"/>
+        <line x1="280" y1="0" x2="280" y2="490" stroke="#e0dbd4" stroke-width="0.4" stroke-dasharray="2 18"/>
+        <line x1="430" y1="0" x2="430" y2="490" stroke="#e0dbd4" stroke-width="0.4" stroke-dasharray="2 18"/>
+        <line x1="600" y1="0" x2="600" y2="490" stroke="#e0dbd4" stroke-width="0.4" stroke-dasharray="2 18"/>
+        <line x1="790" y1="0" x2="790" y2="490" stroke="#e0dbd4" stroke-width="0.4" stroke-dasharray="2 18"/>
+
+        <!-- ── AXIS LABELS ── -->
+        <text x="530" y="528" font-size="7.5" fill="#c8c3bc" text-anchor="middle"
+              letter-spacing="0.12em" font-family="IBM Plex Mono, monospace">tiempo (s)</text>
+
+        <text x="-245" y="14" font-size="7.5" fill="#c8c3bc" text-anchor="middle"
+              letter-spacing="0.12em" font-family="IBM Plex Mono, monospace"
+              transform="rotate(-90)">temperatura (°C)</text>
+
+        <!--
+          Curve anatomy:
+          Each path is a full C, entering from x=1000 (right bleed)
+          at a high-temperature y-value, sweeping left to the nose,
+          then sweeping back right and exiting at x=1000+ at a
+          lower-temperature y-value.
+
+          Pearlite region: y ≈ 20–300 (high temp)
+          Bainite region:  y ≈ 290–430 (mid-low temp)
+          Ms line:         y ≈ 445
+          Mf line:         y ≈ 468
+        -->
+
+        <!-- ── CURVE 1: Ps — gossamer, 0.7px ──
+             Leftmost C, nose closest to y-axis.
+             Enters top-right, nose at x≈85 y≈175, exits bottom-right.
+        -->
+        <path d="
+          M 1000, 18
+          C  700, 22   380, 50   200, 95
+          C  120,118    88,148    85,175
+          C   82,202    95,235   130,265
+          C  175,300   330,326  1000,345
+        "
+        stroke="#cdc8c0" stroke-width="0.7" fill="none" stroke-linecap="round"/>
+
+        <!-- ── CURVE 2: Pf — fine rule, 1.3px ──
+             Nose further right than Ps: x≈165 y≈175.
+             Slightly darker, more presence.
+        -->
+        <path d="
+          M 1000, 18
+          C  720, 24   460, 58   300,106
+          C  210,132   175,155   165,175
+          C  155,195   168,228   210,262
+          C  265,302   460,330  1000,350
+        "
+        stroke="#b8b2aa" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-dasharray="6 5"/>
+
+        <!-- ── CURVE 3: Bs — medium, 1.9px ──
+             Bainite start. Occupies lower temperature zone.
+             Nose at x≈215 y≈328. Enters and exits right.
+             Heavier weight — more authority.
+        -->
+        <path d="
+          M 1000, 295
+          C  780, 296  580, 302  420, 312
+          C  300, 320  240, 324  215, 328
+          C  190, 332  195, 345  225, 358
+          C  270, 376  480, 392  1000, 400
+        "
+        stroke="#a8a29a" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+
+        <!-- ── CURVE 4: Bf — bold, 3px ──
+             Bainite finish. Widest C, nose furthest right: x≈350 y≈328.
+             Heaviest line — anchors the composition.
+             The weight contrast against Ps makes the layering feel intentional.
+        -->
+        <path d="
+          M 1000, 295
+          C  820, 298  680, 308  555, 316
+          C  440, 324  385, 327  350, 328
+          C  315, 329  318, 344  355, 360
+          C  400, 380  600, 398  1000, 408
+        "
+        stroke="#928d86" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="6 5"/>
+
+        <!-- ── Ms / Mf — full-bleed horizontals, ultra-thin ──
+             Dashes at different densities for visual separation.
+        -->
+        <line x1="0" y1="445" x2="1000" y2="445"
+              stroke="#c0bab2" stroke-width="0.8" stroke-dasharray="12 8"/>
+        <line x1="0" y1="468" x2="1000" y2="468"
+              stroke="#c8c3bc" stroke-width="0.5" stroke-dasharray="5 10"/>
+
+        <!-- ── Labels — minimal, floating, far from noise ── -->
+        <!-- austenita: upper-left open region -->
+        <text x="22" y="85"
+              font-size="8" fill="#c0bab2" letter-spacing="0.14em"
+              font-family="IBM Plex Mono, monospace">austenita</text>
+
+        <!-- perlita: sits in the bowl between the two pearlite arms -->
+        <text x="300" y="200"
+              font-size="8" fill="#c0bab2" letter-spacing="0.12em"
+              font-family="IBM Plex Mono, monospace">perlita</text>
+
+        <!-- bainita: in the bowl between the two bainite arms -->
+        <text x="520" y="358"
+              font-size="8" fill="#bdb8b0" letter-spacing="0.12em"
+              font-family="IBM Plex Mono, monospace">bainita</text>
+
+        <!-- martensita: below Mf -->
+        <text x="22" y="484"
+              font-size="8" fill="#c0bab2" letter-spacing="0.12em"
+              font-family="IBM Plex Mono, monospace">martensita</text>
+
+        <!-- Ms / Mf markers at left edge -->
+        <text x="22" y="441"
+              font-size="7.5" fill="#c0bab2" letter-spacing="0.1em"
+              font-family="IBM Plex Mono, monospace">Ms</text>
+        <text x="22" y="464"
+              font-size="7.5" fill="#c8c3bc" letter-spacing="0.1em"
+              font-family="IBM Plex Mono, monospace">Mf</text>
+
+      </svg>
+
+      <div class="diagram-caption">diagrama t-t-t · acero de alta resistencia</div>
+
+      <div class="home-inner reveal">
+        <div class="home-left-spacer"></div>
+        <div class="home-info">
+          <div>
+            <div class="slabel">sobre mí</div>
+            <p class="bio">
+              Ingeniero mecánico y maestro en ciencia de materiales
+              por la UNAM. Me especializo en aceros avanzados de alta
+              resistencia. Divulgo ciencia en
+              <a href="https://tiktok.com/@heliouz_" target="_blank">TikTok</a>
+              — más de 1.1M de seguidores —
+              y en mis ratos libres programo mapas, bots y herramientas
+              de ingeniería.
+            </p>
+          </div>
+          <div>
+            <div class="slabel">datos</div>
+            <div class="facts-grid">
+              <div class="fact-cell">
+                <div class="fact-k">formación</div>
+                <div class="fact-v">ing. mecánico<br>m.sc. materiales</div>
+              </div>
+              <div class="fact-cell">
+                <div class="fact-k">institución</div>
+                <div class="fact-v">UNAM · cdmx</div>
+              </div>
+              <div class="fact-cell">
+                <div class="fact-k">especialidad</div>
+                <div class="fact-v">aceros avanzados<br>metalurgia</div>
+              </div>
+              <div class="fact-cell">
+                <div class="fact-k">divulgación</div>
+                <div class="fact-v"><a href="https://tiktok.com/@heliouz_" target="_blank">+1.1m · tiktok</a></div>
+              </div>
+              <div class="fact-cell">
+                <div class="fact-k">código</div>
+                <div class="fact-v">python · js · mapas</div>
+              </div>
+              <div class="fact-cell">
+                <div class="fact-k">contacto</div>
+                <div class="fact-v"><a href="#" onclick="showPage('contact');return false;">ver página →</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /home-outer -->
+    <footer><span class="f-name">helios ocaña</span><span class="f-copy">cdmx · © 2025</span></footer>
+  </div>
+
+  <!-- ══════════════ PROJECTS ══════════════ -->
+  <div class="page-view" id="page-projects">
+    <div class="content">
+      <div class="projects-grid reveal-group">
+        <div class="proj-card wide" onclick="openModal('qpqt')">
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-type">app web · ingeniería</span><span class="proj-year">2023</span></div>
+            <div class="proj-title">QPQt designer</div>
+            <p class="proj-desc">herramienta para el diseño de tratamientos térmicos de temple y particionado en aceros avanzados de alta resistencia.</p>
+            <span class="proj-arrow">→</span>
+          </div>
+          <div class="proj-side">
+            <div style="background:var(--surface);height:130px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:8.5px;letter-spacing:0.1em;color:var(--mid);text-transform:uppercase;">interfaz app</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-card" onclick="openModal('estumex')">
+          <div class="proj-meta"><span class="proj-type">visualización · mapas</span><span class="proj-year">2022</span></div>
+          <div class="proj-title">EstuMex</div>
+          <p class="proj-desc">mapas interactivos de datos educativos de México.</p>
+          <span class="proj-arrow">→</span>
+        </div>
+        <div class="proj-card" onclick="openModal('bigaku')">
+          <div class="proj-meta"><span class="proj-type">bot · automatización</span><span class="proj-year">2020</span></div>
+          <div class="proj-title">BigakuSan</div>
+          <p class="proj-desc">bot de twitter que busca y publica imágenes estéticas de anime de forma automática.</p>
+          <span class="proj-arrow">→</span>
+        </div>
+        <div class="proj-card" onclick="openModal('cafeterias')">
+          <div class="proj-meta"><span class="proj-type">datos · cartografía</span><span class="proj-year">2023</span></div>
+          <div class="proj-title">cafeterías cdmx</div>
+          <p class="proj-desc">mapa de cafeterías en cdmx construido a partir de recomendaciones reales en twitter.</p>
+          <span class="proj-arrow">→</span>
+        </div>
+        <div class="proj-card" onclick="openModal('peterjong')">
+          <div class="proj-meta"><span class="proj-type">análisis · investigación</span><span class="proj-year">2022</span></div>
+          <div class="proj-title">Peter Jong</div>
+          <p class="proj-desc">análisis de datos y visualización para proyecto de investigación colaborativa.</p>
+          <span class="proj-arrow">→</span>
+        </div>
+      </div>
+    </div>
+    <footer><span class="f-name">helios ocaña</span><span class="f-copy">cdmx · © 2025</span></footer>
+  </div>
+
+  <!-- ══════════════ PUBS ══════════════ -->
+  <div class="page-view" id="page-pubs">
+    <div class="content">
+      <div class="pub-list reveal-group">
+        <a href="https://www.reforma.com/alertan-por-basura-electoral-en-calles/ar2791241" target="_blank" class="pub"><span class="pub-yr">2024</span><div><div class="pub-title">alertan por 'basura' electoral en calles</div><div class="pub-meta">el reforma · abril 2024</div></div></a>
+        <a href="https://www.animalgourmet.com/2023/06/29/cafe-latte-dura-menos-tiempo-en-cdmx/" target="_blank" class="pub"><span class="pub-yr">2023</span><div><div class="pub-title">¿el café latte es más inestable en cdmx que en el resto del mundo?</div><div class="pub-meta">animal gourmet · junio 2023</div></div></a>
+        <div class="pub"><span class="pub-yr">2023</span><div><div class="pub-title">diseño de tratamiento térmico de temple y particionado para aceros avanzados de alta resistencia (ahss)</div><div class="pub-meta">tesis · unam, junio 2023</div></div></div>
+        <a href="https://www.eluniversal.com.mx/menu/crean-mapa-de-cafeterias-fuera-de-la-roma-y-la-condesa-con-recomendaciones-de-twitter/" target="_blank" class="pub"><span class="pub-yr">2023</span><div><div class="pub-title">crean mapa de cafeterías fuera de la roma y la condesa</div><div class="pub-meta">el universal · mayo 2023</div></div></a>
+        <a href="https://upcommons.upc.edu/handle/2117/375173" target="_blank" class="pub"><span class="pub-yr">2022</span><div><div class="pub-title">breve historia del temple: de las espadas a los automóviles modernos</div><div class="pub-meta">materiales avanzados · unam, septiembre 2022</div></div></a>
+        <a href="https://www.sdpnoticias.com/estilo-de-vida/por-que-se-encoge-un-billete-de-20-pesos-al-calentarse-cientifico-lo-explica/" target="_blank" class="pub"><span class="pub-yr">2021</span><div><div class="pub-title">¿por qué se encoge un billete de 20 pesos al calentarse?</div><div class="pub-meta">sdp noticias · octubre 2021</div></div></a>
+        <div class="pub"><span class="pub-yr">2019</span><div><div class="pub-title">efecto de la microestructura sobre el comportamiento termoelástico de la aleación al 1100 procesada por rcs</div><div class="pub-meta">tesis · unam, octubre 2019</div></div></div>
+      </div>
+    </div>
+    <footer><span class="f-name">helios ocaña</span><span class="f-copy">cdmx · © 2025</span></footer>
+  </div>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <div class="page-view" id="page-contact">
+    <div class="content">
+      <div class="contact-layout reveal">
+        <div>
+          <div class="slabel">contacto</div>
+          <p class="contact-note">puedes encontrarme en redes sociales o escribirme directo al correo.</p>
+        </div>
+        <div>
+          <div class="slabel">redes</div>
+          <div class="cl-list">
+            <a class="cl" href="https://twitter.com/Heliouz__" target="_blank"><span class="cl-platform">twitter</span><span class="cl-handle">@Heliouz__</span></a>
+            <a class="cl" href="https://www.instagram.com/heliouz_/" target="_blank"><span class="cl-platform">instagram</span><span class="cl-handle">@heliouz_</span></a>
+            <a class="cl" href="https://www.tiktok.com/@heliouz_" target="_blank"><span class="cl-platform">tiktok</span><span class="cl-handle">@heliouz_</span></a>
+            <a class="cl" href="mailto:"><span class="cl-platform">correo</span><span class="cl-handle" style="font-size:0.85rem;opacity:0.45;">disponible en sitio</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer><span class="f-name">helios ocaña</span><span class="f-copy">cdmx · © 2025</span></footer>
+  </div>
+
+  <!-- ══════════════ MODAL ══════════════ -->
+  <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-meta">
+          <span class="modal-type" id="modal-type"></span>
+          <span class="modal-year" id="modal-year"></span>
+        </div>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    const projects = {
+      bigaku:     { title:'BigakuSan',       type:'bot · automatización',    year:'2020', tags:['python','twitter api','tumblr'],           desc:'Bigaku es un bot que busca y tuitea imágenes estéticas sobre anime. Él mismo obtuvo su propia foto de perfil.', sections:[{label:'¿cómo funciona?',text:'Busca en Tumblr por tags escogidos, pondera imágenes por viralidad y publica periódicamente la más popular.'},{label:'estado actual',text:'Activo desde abril 2020 hasta mayo 2023, cuando la nueva política de Twitter cerró el acceso a la API.'}], image:'foto de perfil · @BigakuSan', link:'https://twitter.com/BigakuSan', linkLabel:'ver en twitter →', linkDisabled:true },
+      qpqt:       { title:'QPQt designer',   type:'app web · ingeniería',    year:'2023', tags:['python','dash','plotly','metalurgia'],       desc:'Calculadora para diseño de aceros de temple y particionado (Q&P). Calcula fracciones de fase, temperatura ideal de temple y porcentaje de carbono en tiempo real.', sections:[{label:'funcionamiento',text:'Basada en el método de Speer et al. para particionado de carbono. Temperatura Ms y coeficiente α calculados con las expresiones de van Bohemen.'},{label:'acceso',text:'Aplicación no pública — contactarme para más información.'}], image:'screenshot · interfaz qpqt', link:null, linkLabel:'acceso restringido', linkDisabled:true },
+      estumex:    { title:'EstuMex',          type:'visualización · mapas',   year:'2022', tags:['javascript','mapbox','sep','datos abiertos'], desc:'Mapas interactivos de datos del sistema educativo en México por municipio, estado y nivel educativo.', sections:[{label:'datos',text:'Fuente: SEP e INEGI. Procesados y normalizados para visualización geoespacial interactiva.'}], image:'mapa interactivo · estumex', link:'#', linkLabel:'ver proyecto →', linkDisabled:false },
+      cafeterias: { title:'cafeterías cdmx', type:'datos · cartografía',     year:'2023', tags:['python','twitter api','mapbox'],             desc:'Mapa de cafeterías en CDMX construido desde recomendaciones reales en Twitter. Cubierto por El Universal y Animal Gourmet.', sections:[{label:'metodología',text:'Recopilación de tweets, extracción de ubicaciones y geocodificación para crear un directorio validado por la comunidad.'}], image:'mapa · cafeterías cdmx', link:'#', linkLabel:'ver mapa →', linkDisabled:false },
+      peterjong:  { title:'Peter Jong',       type:'análisis · investigación',year:'2022', tags:['python','análisis de datos','visualización'], desc:'Análisis de datos y visualización para proyecto de investigación colaborativa.', sections:[], image:null, link:'#', linkLabel:'ver proyecto →', linkDisabled:false }
+    };
+
+    function openModal(key) {
+      const p = projects[key]; if (!p) return;
+      document.getElementById('modal-type').textContent = p.type;
+      document.getElementById('modal-year').textContent = p.year;
+      let html = `<h2 class="modal-title">${p.title}</h2><p class="modal-desc">${p.desc}</p>`;
+      if (p.tags?.length) html += `<div class="modal-tags">${p.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('')}</div>`;
+      if (p.image) html += `<div class="modal-image-placeholder"><span>${p.image}</span></div>`;
+      p.sections.forEach(s => { html += `<div class="modal-section-label">${s.label}</div><div class="modal-detail"><p>${s.text}</p></div>`; });
+      if (p.linkLabel) { const d=p.linkDisabled?' disabled':''; html+=`<a class="modal-link${d}" href="${p.link||'#'}" ${!p.linkDisabled?'target="_blank"':''}>${p.linkLabel}</a>`; }
+      document.getElementById('modal-body').innerHTML = html;
+      document.getElementById('modal-overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); document.body.style.overflow=''; }
+    function handleOverlayClick(e) { if (e.target===document.getElementById('modal-overlay')) closeModal(); }
+    document.addEventListener('keydown', e => { if (e.key==='Escape') closeModal(); });
+
+    const pageMap = { home:'page-home', projects:'page-projects', pubs:'page-pubs', contact:'page-contact' };
+    const navIdx  = { home:0, projects:1, pubs:2, contact:3 };
+    function showPage(key) {
+      Object.values(pageMap).forEach(id => document.getElementById(id).classList.remove('active'));
+      document.getElementById(pageMap[key]).classList.add('active');
+      document.querySelectorAll('.h-nav a').forEach(a => a.classList.remove('active'));
+      document.querySelectorAll('.h-nav a')[navIdx[key]].classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+      setTimeout(triggerReveal, 80);
+    }
+    function triggerReveal() {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+      }, {threshold:0.06});
+      document.querySelectorAll('.page-view.active .reveal, .page-view.active .reveal-group').forEach(el => { el.classList.remove('visible'); io.observe(el); });
+    }
+    setTimeout(triggerReveal, 60);
+
+    document.querySelectorAll('.lang-pill span').forEach(s => {
+      s.addEventListener('click', function() { document.querySelectorAll('.lang-pill span').forEach(x=>x.classList.remove('on')); this.classList.add('on'); });
+    });
+  </script>
+</body>
+</html>

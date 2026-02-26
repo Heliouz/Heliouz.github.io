@@ -1,0 +1,72 @@
+### your site title here
+
+title: Helios O.
+description: Investigo, divulgo y a veces programo.
+
+baseurl: "" #name of GitHub repository
+url: "https://heliouz.com" #custom url to be used instead of GitHub repository
+email: #
+
+# Pagination
+paginate: 4
+permalink: /blog/:year/:title/
+paginate_path: /blog/page:num/
+
+# Social media links in footer
+twitter: "heliouz__"
+tiktok: ""
+instagram: "heliouz_"
+email: ""
+
+
+# Markdown
+highlighter: rouge
+markdown: kramdown
+
+# Tracker
+analytics: G-LQ04J6KFPR
+
+# optimization -> compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+#collection
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+    order:
+      - bigaku.md
+      - qpqt.md
+      - redirect.md
+      - cafeterias.md
+      - estumex.md
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _pages
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - archive.html
+  - blog/
+  - _posts/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-email-protect
+  - jekyll-target-blank
+  - jemoji
+  

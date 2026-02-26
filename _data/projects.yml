@@ -1,0 +1,212 @@
+- id: qpqt
+  title_es: QPQT
+  title_en: QPQT
+  type_es: app web · ingeniería
+  type_en: web app · engineering
+  year: "2023"
+  tags_es: [python, dash, plotly, metalurgia]
+  tags_en: [python, dash, plotly, metallurgy]
+  wide: true
+  thumb: /assets/images/qpqt/zoom.gif
+  desc_es: >
+    Calculadora desarrollada como parte de mi tesis de maestría. Facilita el diseño
+    de aceros de temple y particionado (Q&P): calcula fracciones de fase, temperatura
+    ideal de temple y porcentaje de carbono en tiempo real.
+  desc_en: >
+    Calculator developed as part of my master's thesis. Facilitates the design
+    of quench & partition steels (Q&P): calculates phase fractions, ideal quench
+    temperature and carbon percentage in real time.
+  images:
+    - src: /assets/images/qpqt/ss.png
+      alt: interfaz principal de QPQT
+    - src: /assets/images/qpqt/qttc.png
+      alt: temperatura ideal de temple vs carbono
+      group: curves
+    - src: /assets/images/qpqt/qtta.png
+      alt: fracción de austenita retenida vs carbono
+      group: curves
+    - src: /assets/images/qpqt/zoom.gif
+      alt: demo interactivo — gráficas en tiempo real
+  sections_es:
+    - label: funcionamiento
+      text: >
+        La calculadora recibe los porcentajes en peso de los elementos aleantes
+        y calcula de forma inmediata las fracciones de fase y la temperatura ideal
+        de temple. Programada en Python con base en el método propuesto por Speer et al.
+        para el particionado del carbono en aceros. La temperatura Ms y el coeficiente α
+        se calculan con las expresiones de van Bohemen.
+    - label: otras curvas
+      text: >
+        Se pueden graficar la temperatura ideal de temple y la fracción máxima
+        de austenita retenida con respecto al porcentaje de carbono de la aleación.
+    - label: interfaz
+      text: >
+        La interfaz gráfica y el deployment se realizó con Dash a través de un servidor
+        web, de forma que la calculadora puede ser utilizada por cualquier dispositivo
+        con un navegador. Las gráficas son interactivas y se actualizan en tiempo real
+        al ajustar los porcentajes en peso.
+    - label: acceso
+      text: Aplicación no pública — contactarme para más información.
+  sections_en:
+    - label: how it works
+      text: >
+        The calculator takes weight percentages of alloying elements and immediately
+        outputs phase fractions and ideal quench temperature. Built in Python using
+        the Speer et al. method for carbon partitioning in steels. Ms temperature
+        and α coefficient use van Bohemen expressions.
+    - label: additional curves
+      text: >
+        The ideal quench temperature and maximum retained austenite fraction can be
+        plotted against the alloy's carbon percentage.
+    - label: interface
+      text: >
+        The GUI and deployment were built with Dash through a web server, so the
+        calculator can be used on any device with a browser. Charts are interactive
+        and update in real time as weight percentages are adjusted.
+    - label: access
+      text: Non-public application — contact me for more information.
+  image_alt: screenshot · interfaz qpqt
+  link: null
+  link_label_es: acceso restringido
+  link_label_en: restricted access
+  link_disabled: true
+
+- id: estumex
+  title_es: Mapas de México
+  title_en: Maps of Mexico
+  type_es: visualización · mapas
+  type_en: visualization · maps
+  year: "2022"
+  tags_es: [python, javascript, srtm, hydrosheds]
+  tags_en: [python, javascript, srtm, hydrosheds]
+  wide: false
+  desc_es: >
+    Compilación de mapas de México hechos con python, javascript y cariño.
+    Mapa topográfico, ríos y más.
+  desc_en: >
+    Collection of maps of Mexico made with python, javascript and care.
+    Topographic map, rivers and more.
+  images:
+    - src: /assets/images/mapatopo/ridge_mex.png
+      alt: mapa topográfico de México
+    - src: /assets/images/mapatopo/maprios.jpg
+      alt: ríos de México
+    - src: /assets/images/mapatopo/maprio1.jpg
+      alt: detalle ríos 1
+      group: rivers
+    - src: /assets/images/mapatopo/maprio2.jpg
+      alt: detalle ríos 2
+      group: rivers
+    - src: /assets/images/mapatopo/maprio3.jpg
+      alt: detalle ríos 3
+      group: rivers
+  sections_es:
+    - label: mapa topográfico
+      text: >
+        Los datos de elevación provienen del Shuttle Radar Topography Mission (SRTM)
+        de la NASA.
+    - label: ríos
+      text: >
+        Con solo dibujar los ríos de México es suficiente para comprender la geografía
+        del país. Los datos son de HydroSHEDS (HydroRIVERS).
+  sections_en:
+    - label: topographic map
+      text: >
+        Elevation data comes from NASA's Shuttle Radar Topography Mission (SRTM).
+    - label: rivers
+      text: >
+        Drawing only Mexico's rivers is enough to understand the country's geography.
+        Data from HydroSHEDS (HydroRIVERS).
+  image_alt: mapa topográfico · México
+  link: null
+  link_label_es:
+  link_label_en:
+  link_disabled: true
+
+- id: bigaku
+  title_es: BigakuSan
+  title_en: BigakuSan
+  type_es: bot · automatización
+  type_en: bot · automation
+  year: "2020"
+  tags_es: [python, twitter api, tumblr]
+  tags_en: [python, twitter api, tumblr]
+  wide: false
+  desc_es: >
+    Bot que busca y tuitea imágenes estéticas sobre anime.
+    De hecho, él obtuvo su propia foto de perfil.
+  desc_en: >
+    Bot that searches and tweets aesthetic anime images.
+    It even chose its own profile picture.
+  images:
+    - src: /assets/images/bigaku/bigaku.jpg
+      alt: foto de perfil de Bigaku
+    - src: /assets/images/bigaku/kagome.gif
+      alt: ejemplo — kagome
+    - src: /assets/images/bigaku/ejemplo1.gif
+      alt: ejemplo — conejito
+    - src: /assets/images/bigaku/ejemplo2.gif
+      alt: ejemplo — animación
+  sections_es:
+    - label: origen del nombre
+      text: "Japonés: 美学 (Bigaku) — Español: Estética."
+    - label: ¿cómo funciona?
+      text: >
+        Bigaku busca en Tumblr por tags escogidos, recopila todas las imágenes y las
+        pondera de acuerdo a qué tan virales han sido. Cada cierto tiempo publica la
+        imagen que considera más viral, logrando así una estética con base en los
+        criterios de mucha gente en internet.
+    - label: estado actual
+      text: >
+        Activo desde abril 2020 hasta mayo 2023. Con la nueva política de bots
+        en Twitter, Bigaku dejó de funcionar.
+  sections_en:
+    - label: name origin
+      text: "Japanese: 美学 (Bigaku) — English: Aesthetics."
+    - label: how it works
+      text: >
+        Bigaku searches Tumblr by selected tags, collects all images and weighs them
+        by virality. It periodically publishes the most viral image, achieving an
+        aesthetic based on the criteria of many people on the internet.
+    - label: current status
+      text: >
+        Active from April 2020 until May 2023. Twitter's new bot policy shut it down.
+  image_alt: foto de perfil · @BigakuSan
+  link: https://x.com/BigakuSan
+  link_label_es: ver en twitter →
+  link_label_en: view on twitter →
+  link_disabled: false
+
+- id: cafeterias
+  title_es: cafeterías cdmx
+  title_en: coffee shops cdmx
+  type_es: datos · cartografía
+  type_en: data · cartography
+  year: "2023"
+  tags_es: [python, twitter api, mapbox]
+  tags_en: [python, twitter api, mapbox]
+  wide: false
+  desc_es: >
+    Mapa de cafeterías en CDMX construido desde recomendaciones reales en Twitter.
+    Cubierto por El Universal y Animal Gourmet.
+  desc_en: >
+    Map of coffee shops in CDMX built from real Twitter recommendations.
+    Covered by El Universal and Animal Gourmet.
+  embed: "https://www.google.com/maps/d/u/0/embed?mid=1ebHDBCKTOaZi-TSH7cetIdpE46Iq5ag&ehbc=2E312F"
+  sections_es:
+    - label: metodología
+      text: >
+        Recopilación de tweets, extracción de ubicaciones y geocodificación para
+        crear un directorio validado por la comunidad. Cafeterías chidas en la CDMX
+        que NO están en la Roma/Condesa.
+  sections_en:
+    - label: methodology
+      text: >
+        Tweet collection, location extraction and geocoding to create a
+        community-validated directory. Cool coffee shops in CDMX that are NOT
+        in Roma/Condesa.
+  image_alt: mapa · cafeterías cdmx
+  link: null
+  link_label_es:
+  link_label_en:
+  link_disabled: true
