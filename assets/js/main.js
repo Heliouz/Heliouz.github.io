@@ -151,8 +151,3 @@ function setLang(lang) {
   }
 }
 
-document.querySelectorAll('.lang-pill span').forEach(function(s) {
-  s.addEventListener('click', function() {
-    setLang(this.getAttribute('data-lang'));
-  });
-});

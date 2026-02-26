@@ -44,6 +44,7 @@ header {
   padding: 4px 0;
   color: var(--mid); cursor: pointer; transition: all 0.15s;
   box-sizing: border-box;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
 .lang-pill span:first-child { border-right: 1px solid var(--rule); }
 .lang-pill span.on { background: var(--text); color: var(--bg); border-color: var(--text); }
@@ -256,6 +257,8 @@ footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2.5rem 2rem; display
   header { padding: 1.2rem 1.2rem 0; flex-wrap: wrap; gap: 0.5rem; }
   .h-nav { flex-direction: row; gap: 1rem; width: 100%; justify-content: flex-end; margin-top: 0.3rem; }
   .h-nav a { font-size: 1.4rem; }
+  .lang-pill { margin-top: 0.6rem; }
+  .lang-pill span { flex: 0 0 36px; padding: 8px 0; font-size: 9px; }
 
   .hero { padding: 0 1.2rem 1rem; flex-direction: column; align-items: flex-start; gap: 1rem; }
   .hero-right { align-items: flex-start; }
