@@ -235,6 +235,7 @@ published: true
       {% for project in site.data.projects %}
       <div class="proj-card{% if project.wide %} wide{% endif %}"
            data-id="{{ project.id }}"
+           data-simulator="{{ project.simulator }}"
            data-title-es="{{ project.title_es | escape }}"
            data-title-en="{{ project.title_en | escape }}"
            data-type-es="{{ project.type_es | escape }}"

@@ -1,3 +1,32 @@
+- id: stamp-album
+  title_es: Precio real de completar el album del mundial
+  title_en: Real cost of completing the World Cup album
+  type_es: simulacion · fifa 2026 · probabilidad
+  type_en: simulation · fifa 2026 · probability
+  year: "2026"
+  tags_es: []
+  tags_en: []
+  wide: false
+  simulator: stamp_album
+  desc_es: >
+    Simulador para estimar cuanto costaria completar el album del Mundial FIFA 2026.
+    La simulacion abre sobres virtuales, cuenta cuantas estampas nuevas aparecen y
+    repite el proceso muchas veces para calcular un precio probable. Puedes elegir
+    cuantas estampas finales conseguirias por intercambio.
+  desc_en: >
+    Simulator to estimate how much it would cost to complete the FIFA 2026 World Cup
+    album. It opens virtual packs, counts how many new stamps appear, and repeats
+    the process many times to estimate a likely price. You can choose how many final
+    stamps would be completed through trades.
+  images: []
+  sections_es: []
+  sections_en: []
+  image_alt:
+  link: null
+  link_label_es:
+  link_label_en:
+  link_disabled: true
+
 - id: qpqt
   title_es: QPQT
   title_en: QPQT
