@@ -1,0 +1,47 @@
+title: helios
+description: Investigo, divulgo y a veces programo.
+
+baseurl: "" #name of GitHub repository
+url: "https://heliouz.com" #custom url to be used instead of GitHub repository
+
+# Social media links in footer
+twitter: "heliouz__"
+tiktok: ""
+instagram: "heliouz_"
+email: ""
+
+# Markdown
+highlighter: rouge
+markdown: kramdown
+
+# Tracker
+analytics: G-LQ04J6KFPR
+
+# optimization
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _pages
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - mockup.html
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-email-protect
+  - jekyll-target-blank
+  - jemoji
