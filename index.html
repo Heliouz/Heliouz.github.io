@@ -254,7 +254,8 @@ published: true
            data-link-label-es="{{ project.link_label_es | escape }}"
            data-link-label-en="{{ project.link_label_en | escape }}"
            data-link-disabled="{{ project.link_disabled }}"
-           onclick="openModal(this)">
+           data-external="{{ project.external }}"
+           onclick="handleCardClick(this)">
         {% if project.wide %}
         <div class="proj-body">
           <div class="proj-meta">

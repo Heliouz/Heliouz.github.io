@@ -1,3 +1,70 @@
+- id: organillero
+  title_es: El Organillero
+  title_en: El Organillero
+  type_es: mapa · instrumento
+  type_en: map · instrument
+  year: "2026"
+  tags_es: [d3.js, tone.js, fastapi, gtfs, metrobús]
+  tags_en: [d3.js, tone.js, fastapi, gtfs, metrobús]
+  wide: true
+  thumb: /assets/images/organillero/thumb.png
+  desc_es: >
+    Un mapa en vivo del Metrobús CDMX que también es un instrumento.
+    Cada vez que un metrobús entra a una estación, toca una nota del organillo.
+    Nadie decide qué suena ni cuándo — la partitura la escriben los choferes,
+    el tráfico, la lluvia.
+  desc_en: >
+    A live map of Mexico City's Metrobús that is also a musical instrument.
+    Every time a bus enters a station, it plays a note on the organillo.
+    Nobody decides what plays or when — the score is written by drivers,
+    traffic, rain.
+  images: []
+  sections_es:
+    - label: cómo funciona
+      text: >
+        Los datos vienen del feed GTFS en tiempo real del Metrobús, actualizado
+        cada 30 segundos. Las 7 líneas tienen timbres distintos y cada estación
+        su propia nota dentro de su línea. El mapa se construyó con D3.js y el
+        audio con Tone.js; el backend es un proxy en FastAPI que consume y cachea
+        el feed. Las rutas y la silueta de la ciudad vienen de los datos abiertos
+        de la CDMX y la CONABIO.
+    - label: el sonido
+      text: >
+        En las mañanas es caótico: muchos metrobuses, notas por todas partes, poco
+        silencio. Por la noche la manivela gira más despacio y la ciudad respira
+        entre nota y nota. Cada vez que lo abres suena algo que nunca va a volver
+        a sonar exactamente igual.
+    - label: el nombre
+      text: >
+        Viene del organillero — el músico callejero que toca el organillo, uno de
+        los sonidos más reconocibles de la CDMX. El proyecto convierte a la ciudad
+        entera en un organillo que se toca a sí mismo.
+  sections_en:
+    - label: how it works
+      text: >
+        Data comes from the Metrobús GTFS real-time feed, updated every 30 seconds.
+        The 7 lines each have a different timbre and each station its own note within
+        its line. The map is built with D3.js and the audio with Tone.js; the backend
+        is a FastAPI proxy that consumes and caches the feed. Routes and the city
+        outline come from open data from CDMX and CONABIO.
+    - label: the sound
+      text: >
+        In the mornings it's chaotic: many buses, notes everywhere, little silence.
+        At night the crank turns more slowly and the city breathes between note and
+        note. Every time you open it, it sounds like something that will never sound
+        exactly the same again.
+    - label: the name
+      text: >
+        From the organillero — the street organ grinder, one of the most recognizable
+        sounds of Mexico City's street life. The project turns the entire city into
+        an organillo playing itself.
+  image_alt: mapa en vivo · El Organillero
+  external: true
+  link: https://organillero.heliouz.com
+  link_label_es: abrir el organillero →
+  link_label_en: open el organillero →
+  link_disabled: false
+
 - id: stamp-album
   title_es: Precio real de completar el album del mundial
   title_en: Real cost of completing the World Cup album

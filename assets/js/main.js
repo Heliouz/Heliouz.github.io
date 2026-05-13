@@ -47,6 +47,15 @@ function triggerReveal() {
 setTimeout(triggerReveal, 60);
 
 /* MODAL */
+function handleCardClick(el) {
+  if (el.getAttribute('data-external') === 'true') {
+    var link = el.getAttribute('data-link');
+    if (link && link !== 'null') window.open(link, '_blank', 'noopener,noreferrer');
+    return;
+  }
+  openModal(el);
+}
+
 var lastModalCard = null;
 
 function openModal(el, options) {
