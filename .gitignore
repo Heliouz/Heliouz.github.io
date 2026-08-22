@@ -12,3 +12,6 @@ vendor/
 Thumbs.db
 *.swp
 *.swo
+
+# Claude Code local config
+.claude/
