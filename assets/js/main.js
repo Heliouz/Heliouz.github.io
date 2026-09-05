@@ -73,7 +73,6 @@ function openModal(el, options) {
   var projectId = el.getAttribute('data-id');
   var simulator = el.getAttribute('data-simulator');
   var isStampAlbum = simulator === 'stamp_album';
-  var type = el.getAttribute('data-type-' + lang) || el.getAttribute('data-type-es');
   var year = el.getAttribute('data-year');
   var title = el.getAttribute('data-title-' + lang) || el.getAttribute('data-title-es');
   var desc = el.getAttribute('data-desc-' + lang) || el.getAttribute('data-desc-es');
@@ -92,11 +91,12 @@ function openModal(el, options) {
   var sections = [];
   try { sections = JSON.parse(sectionsRaw) || []; } catch(e) { sections = []; }
 
-  document.getElementById('modal-type').textContent = type;
-  document.getElementById('modal-year').textContent = year;
   document.querySelector('.modal').classList.toggle('modal-simulator', isStampAlbum);
 
+  /* Titulo, fecha y descripcion: lo mismo que muestra la tarjeta. El tipo
+     ("simulacion · fifa 2026 · probabilidad") ya no se pinta en ningun lado. */
   var html = '<h2 class="modal-title">' + title + '</h2>';
+  if (year) html += '<div class="modal-year">' + year + '</div>';
   html += '<p class="modal-desc">' + desc + '</p>';
 
   if (tags) {

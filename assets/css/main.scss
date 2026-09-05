@@ -285,7 +285,6 @@ a.pub:hover .pub-src { color: var(--text2); }
 @keyframes sheetUp { from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1} }
 .modal-header { position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--rule); padding: 1.2rem 1.8rem; display: flex; justify-content: space-between; align-items: center; z-index: 10; }
 .modal-meta { display: flex; gap: 1.2rem; align-items: baseline; }
-.modal-type { font-size: 10.5px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--mid); }
 .modal-year { font-size: 10.5px; color: var(--mid); letter-spacing: 0.05em; }
 .modal-close { background: none; border: none; cursor: pointer; font-size: 14px; color: var(--mid); padding: 0.2rem 0.4rem; transition: color 0.15s; font-family: var(--sans); }
 .modal-close:hover { color: var(--text); }
@@ -490,11 +489,16 @@ a.pub, .pr, .proj-card, .more, .mail, .dock a {
 /* ══ AJUSTES AL MODAL ══
    El modal se hereda del sitio anterior; aquí se le quitan las versalitas
    espaciadas y se le pasa la tipografía nueva. */
-.modal-type, .modal-year, .modal-section-label, .modal-tag, .modal-link {
+.modal-year, .modal-section-label, .modal-tag, .modal-link {
   text-transform: none;
   letter-spacing: 0;
 }
-.modal-type, .modal-year { font-size: 13.5px; color: var(--mid); }
+.modal-header { justify-content: flex-end; }
+.modal-title { margin-bottom: 8px; }
+.modal-year {
+  display: block; font-size: 13px; color: var(--soft);
+  margin-bottom: 20px; font-feature-settings: "tnum" 1;
+}
 .modal-section-label { font-size: 14px; color: var(--soft); border-bottom: none; }
 .modal-title { font-family: var(--serif); }
 .modal-desc { font-family: var(--sans); font-size: 17px; line-height: 1.66; opacity: 1; color: var(--text2); }
