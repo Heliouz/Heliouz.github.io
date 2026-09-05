@@ -35,8 +35,9 @@ function initDock() {
 initDock();
 
 /* PRENSA
-   Las cuatro mas recientes se ven siempre; el resto entra con el boton, que
-   solo existe en movil (en escritorio el CSS muestra las ocho de una vez). */
+   Seis destacadas se ven siempre; las otras 38 viven en el archivo agrupado
+   (#press-rest) y entran con el boton, que ahora existe en todos los tamanos:
+   son demasiadas para mostrarlas de una vez incluso en escritorio. */
 function togglePress(btn) {
   var rest = document.getElementById('press-rest');
   if (!rest) return;
