@@ -193,7 +193,7 @@
         con un navegador. Las gráficas son interactivas y se actualizan en tiempo real
         al ajustar los porcentajes en peso.
     - label: acceso
-      text: Aplicación no pública — contactarme para más información.
+      text: No está publicada. Escríbeme si quieres verla.
   sections_en:
     - label: how it works
       text: >
@@ -211,9 +211,6 @@
         calculator can be used on any device with a browser. Charts are interactive
         and update in real time as weight percentages are adjusted.
     - label: access
-      text: Non-public application — contact me for more information.
+      text: It isn't published. Write to me if you'd like to see it.
   image_alt: screenshot · interfaz qpqt
   link: null
-  link_label_es: acceso restringido
-  link_label_en: restricted access
-  link_disabled: true
