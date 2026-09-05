@@ -1,16 +1,18 @@
-<header>
-  <div class="h-id">
-    <a class="h-name" onclick="showPage('home')">helios ocaña</a>
-    <span class="h-sub">@heliouz_ · mexico</span>
-    <div class="lang-pill">
-      <span class="on" data-lang="es" onclick="setLang('es')">es</span>
-      <span data-lang="en" onclick="setLang('en')">en</span>
-    </div>
-  </div>
-  <nav class="h-nav">
-    <a class="active" onclick="showPage('home')" data-es="inicio" data-en="home">inicio</a>
-    <a onclick="showPage('pubs')" data-es="publicaciones" data-en="publications">publicaciones</a>
-    <a onclick="showPage('projects')" data-es="proyectos" data-en="projects">proyectos</a>
-    <a onclick="showPage('contact')" data-es="contacto" data-en="contact">contacto</a>
+<header class="top">
+  <span class="top-place" data-es="ciudad de méxico" data-en="mexico city">ciudad de méxico</span>
+  <nav class="top-nav">
+    <a href="#trabajo" data-es="trabajo" data-en="work">trabajo</a>
+    <a href="#publicaciones" data-es="publicaciones" data-en="publications">publicaciones</a>
+    <a href="#contacto" data-es="contacto" data-en="contact">contacto</a>
+    <span class="lang-pill">
+      <span class="on" data-lang="es" onclick="setLang('es')">es</span><span class="sep">/</span><span data-lang="en" onclick="setLang('en')">en</span>
+    </span>
   </nav>
 </header>
+
+<nav class="dock" aria-label="secciones">
+  <a href="#top" class="on" data-es="inicio" data-en="home">inicio</a>
+  <a href="#trabajo" data-es="trabajo" data-en="work">trabajo</a>
+  <a href="#publicaciones" data-es="textos" data-en="writing">textos</a>
+  <a href="#contacto" data-es="contacto" data-en="contact">contacto</a>
+</nav>

@@ -1,57 +1,64 @@
-/* PAGE SWITCHING */
-var pageMap = { home: 'page-home', projects: 'page-projects', pubs: 'page-pubs', contact: 'page-contact' };
-var navIdx = { home: 0, pubs: 1, projects: 2, contact: 3 };
+/* IDIOMA */
 var currentLang = 'es';
 
-function showPage(key, options) {
-  if (!pageMap[key]) return;
-
-  Object.values(pageMap).forEach(function(id) {
-    document.getElementById(id).classList.remove('active');
-  });
-  document.getElementById(pageMap[key]).classList.add('active');
-  document.querySelectorAll('.h-nav a').forEach(function(a) {
-    a.classList.remove('active');
-  });
-  document.querySelectorAll('.h-nav a')[navIdx[key]].classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  setTimeout(triggerReveal, 80);
-
-  if (!options || options.updateHash !== false) {
-    setPageHash(key);
-  }
-}
-
-function setPageHash(key) {
-  var target = '#' + key;
-  if (window.location.hash !== target) {
-    history.pushState(null, '', target);
-  }
-}
-
-/* SCROLL REVEAL */
+/* REVELADO AL SCROLL */
 function triggerReveal() {
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        io.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
     });
   }, { threshold: 0.06 });
-  document.querySelectorAll('.page-view.active .reveal, .page-view.active .reveal-group').forEach(function(el) {
-    el.classList.remove('visible');
-    io.observe(el);
-  });
+  document.querySelectorAll('.reveal, .reveal-group').forEach(function(el) { io.observe(el); });
 }
 setTimeout(triggerReveal, 60);
 
+/* BARRA MOVIL
+   Marca la seccion visible. Prensa apunta al mismo boton que publicaciones. */
+function initDock() {
+  var dock = document.querySelector('.dock');
+  if (!dock || !('IntersectionObserver' in window)) return;
+  var links = dock.querySelectorAll('a');
+  var owner = { top: 0, trabajo: 1, publicaciones: 2, prensa: 2, contacto: 3 };
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var i = owner[e.target.id];
+      if (i === undefined) return;
+      for (var k = 0; k < links.length; k++) links[k].classList.toggle('on', k === i);
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(owner).forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) io.observe(el);
+  });
+}
+initDock();
+
+/* PRENSA
+   Las cuatro mas recientes se ven siempre; el resto entra con el boton, que
+   solo existe en movil (en escritorio el CSS muestra las ocho de una vez). */
+function togglePress(btn) {
+  var rest = document.getElementById('press-rest');
+  if (!rest) return;
+  var opening = rest.hasAttribute('hidden');
+  if (opening) rest.removeAttribute('hidden'); else rest.setAttribute('hidden', '');
+  btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+  btn.querySelector('.more-open').hidden = opening;
+  btn.querySelector('.more-close').hidden = !opening;
+}
+
 /* MODAL */
 function handleCardClick(el) {
+  /* Los proyectos con app propia (organillero, croquis, cartelera) se abren
+     directo; el modal es solo para los que viven aqui: qpqt y el album.
+     Si a un proyecto externo aun le falta la URL, cae al modal en vez de
+     quedarse muerto. */
   if (el.getAttribute('data-external') === 'true') {
     var link = el.getAttribute('data-link');
-    if (link && link !== 'null') window.open(link, '_blank', 'noopener,noreferrer');
-    return;
+    if (link && link !== 'null' && link !== '') {
+      window.open(link, '_blank', 'noopener,noreferrer');
+      return;
+    }
   }
   openModal(el);
 }
@@ -166,7 +173,7 @@ function closeModal(options) {
   cancelStampAlbumSimulation();
 
   if (wasOpen && options.updateHash !== false && getHashRoute()[0] === 'projects' && getHashRoute()[1]) {
-    history.pushState(null, '', '#projects');
+    history.pushState(null, '', '#trabajo');
   }
 }
 
@@ -202,31 +209,17 @@ function findProjectCard(projectId) {
 
 function handleHashRoute() {
   var route = getHashRoute();
-  if (!route.length) {
-    if (document.getElementById('modal-overlay').classList.contains('open')) {
-      closeModal({ updateHash: false });
-    }
-    showPage('home', { updateHash: false });
-    return;
-  }
+  var overlay = document.getElementById('modal-overlay');
 
-  var page = route[0];
-  var projectId = route[1];
-
-  if (pageMap[page]) {
-    showPage(page, { updateHash: false });
-  }
-
-  if (page === 'projects' && projectId) {
-    var card = findProjectCard(projectId);
+  if (route.length >= 2 && (route[0] === 'projects' || route[0] === 'proyectos')) {
+    var card = findProjectCard(route[1]);
     if (card) {
-      setTimeout(function() {
-        openModal(card, { updateHash: false });
-      }, 90);
+      setTimeout(function() { openModal(card, { updateHash: false }); }, 90);
+      return;
     }
-  } else if (document.getElementById('modal-overlay').classList.contains('open')) {
-    closeModal({ updateHash: false });
   }
+
+  if (overlay && overlay.classList.contains('open')) closeModal({ updateHash: false });
 }
 
 window.addEventListener('hashchange', handleHashRoute);
