@@ -181,8 +181,8 @@ a.pr:hover .pr-src, .pr-lead:hover .pr-src { color: var(--text2); }
 .press-archive { display: grid; gap: 32px; margin-top: 28px; }
 .press-archive[hidden] { display: none; }
 .pr-group-t {
-  font-family: var(--sans); font-size: 12px; font-weight: 500;
-  letter-spacing: 0.07em; text-transform: uppercase; color: var(--soft);
+  font-family: var(--sans); font-size: 14.5px; font-weight: 500;
+  letter-spacing: 0; color: var(--mid);
   padding-bottom: 9px; border-bottom: 1px solid var(--rule);
 }
 .pr-list { display: grid; grid-template-columns: 1fr; column-gap: 64px; }
